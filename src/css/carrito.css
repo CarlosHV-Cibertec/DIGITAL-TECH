@@ -1,7 +1,7 @@
 @import url(template.css);
 #carrito {
-    width: 400px;
-    height: 800px;
+    width: 300px;
+    height: 600px;
     border: 1px solid rgba(128, 128, 128, 0.598);
     border-top: 8px solid #01acf4;
     border-radius: 25px;
