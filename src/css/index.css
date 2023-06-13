@@ -1,0 +1,73 @@
+@import url(template.css);
+.top-bar {
+    background-color: #010326;
+  }
+  
+  .top-bar__content {
+    height: 56px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  .top-bar__logo {
+    width: 40px;
+    height: 30px;
+    background-color: #F0F2F2;
+  }
+  
+  .top-bar__input-search input[type=search] {
+    width: 100px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 12px;
+    border-radius: 10px;
+    height: 30px;
+    text-align: center;
+    color: #010326;
+  }
+  
+  .top-bar__login {
+    display: flex;
+    gap: 7px;
+  }
+  
+  .top-bar__account {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 7px;
+  }
+  
+  .top-bar__account a {
+    color: #F0F2F2;
+    font-size: 12px;
+  }
+  
+  .nav-bar {
+    background-color: #6FBFBF;
+  }
+  
+  .nav-bar ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 7px;
+  }
+  
+  .nav-bar li {
+    list-style: none;
+    margin: 10px 0;
+    font-size: 12px;
+  }
+  
+  .nav-bar li a {
+    color: #F0F2F2;
+  }
+  
+  .nav-bar li a:hover {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 16px;
+    color: #010326;
+  }
