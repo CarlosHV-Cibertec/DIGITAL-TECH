@@ -28,61 +28,61 @@ const celulares = [
     {
       marca: "Samsung",
       modelo: "Galaxy S21",
-      imagen: "img/celular2.jfif",
+      imagen: "../assets/img/celular2.jfif",
       precio: 999.99
     },
     {
       marca: "Apple",
       modelo: "iPhone 12",
-      imagen: "img/celular1.jfif",
+      imagen: "../assets/img/celular1.jfif",
       precio: 1459.99
     },
     {
       marca: "Apple",
       modelo: "iPhone 12",
-      imagen: "img/celular3.jfif",
+      imagen: "../assets/img/celular3.jfif",
       precio: 1459.99
     },
     {
       marca: "Apple",
       modelo: "iPhone 12",
-      imagen: "img/celular4.jfif",
+      imagen: "../assets/img/celular4.jfif",
       precio: 1459.99
     },
     {
       marca: "Samsung",
       modelo: "Galaxy S21",
-      imagen: "img/celular5.jfif",
+      imagen: "../assets/mg/celular5.jfif",
       precio: 999.99
       },
     {
       marca: "Apple",
       modelo: "iPhone 12",
-      imagen: "img/celular6.jfif",
+      imagen: "../assets/img/celular6.jfif",
       precio: 1459.99
     },
     {
       marca: "Apple",
       modelo: "iPhone 12",
-      imagen: "img/celular7.jfif",
+      imagen: "../assets/img/celular7.jfif",
       precio: 1459.99
     },
     {
       marca: "Apple",
       modelo: "iPhone 12",
-      imagen: "img/celular8.jfif",
+      imagen: "../assets/img/celular8.jfif",
       precio: 1459.99
     },
     {
       marca: "Apple",
       modelo: "iPhone 12",
-      imagen: "img/celular9.jfif",
+      imagen: "../assets/img/celular9.jfif",
       precio: 1459.99
     },
     {
       marca: "Apple",
       modelo: "iPhone 12",
-      imagen: "img/celular10.jfif",
+      imagen: "../assets/img/celular10.jfif",
       precio: 1459.99
     },
      
