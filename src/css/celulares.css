@@ -1,0 +1,86 @@
+@import url(template.css);
+
+* {
+    margin: 0;
+    padding: 0;
+  }
+
+  main {
+    padding: 20px;
+    display: flex;
+  }
+  h2 {
+    margin-top: 40px;
+    text-align: center;
+    font-size: 30px;
+  }
+  
+  #celulares {
+    width: 85%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+  }
+  #filtros {
+    margin: 15px 10px;
+    padding: 20px;
+    width: 15%;
+    height: 500px;
+    border: 2px solid black;
+  }
+  
+  #filtros h3 {
+    margin-top: 10px;
+    font-size: 25px;
+  }
+  
+  #marca-filtros {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  #marca-filtros li {
+    margin-bottom: 5px;
+  }
+  
+  #precio-filtro {
+    width: 70%;
+    margin: 0 50px;
+  }
+  
+  #precio-valor {
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  #aplicar-filtros-btn {
+    display: block;
+    margin: 10px auto;
+  }
+  
+  .celular {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .celular img {
+    width: 150px;
+    height: 170px;
+    object-fit: cover;
+  }
+  .celular h3 {
+    margin: 10px 0;
+  }
+  
+  .celular p {
+    margin: 0;
+  }
+  
+  button{
+    background-color: black;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 10px;
+  }
