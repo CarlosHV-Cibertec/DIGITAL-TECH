@@ -1,0 +1,12 @@
+<div class="producto"> 
+    <div class="imagenprod">
+    <img src="./src/assets/img/prod_mobile.png" alt="samsung">
+    </div>
+    <div class="descripcion">
+        <h4>nombre_producto </h4>
+        <p>1000 $</p>
+    </div>
+    <div class="removeProd"> 
+        <p>x</p>
+    </div>
+</div>

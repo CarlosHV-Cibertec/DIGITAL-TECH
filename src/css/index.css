@@ -30,24 +30,31 @@
   .top-bar__login {
     display: flex;
     gap: 7px;
+    cursor: pointer;
   }
   
-  .top-bar__login p{
-    color: #F0F2F2;
-    font-family: "Montserrat", sans-serif;
-    font-size: 12px;
-    align-items: center;
-  }
   .top-bar__account {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 7px;
   }
   
+  .top-bar__car{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
   .top-bar__account a {
     color: #F0F2F2;
     font-size: 12px;
+    margin-left: 5px;
+
+  }
+
+  .top-bar__car a{
+    color: #F0F2F2;
+    font-size: 12px;
+    margin-left: 5px;
   }
   
   .nav-bar {

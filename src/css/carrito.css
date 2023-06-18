@@ -1,20 +1,22 @@
-@import url(template.css);
+*{
+  padding: 0;
+  margin: 0;
+}
+
 #carrito {
+    /* position: absolute; */
     width: 300px;
-    height: 600px;
+    height: 97vh;
     border: 1px solid rgba(128, 128, 128, 0.598);
-    border-top: 8px solid #01acf4;
-    border-radius: 25px;
+    background: #fdfdfdf5;
     padding: 10px;
-    position: fixed;
-    right: 15px;
-    top: 50%;
-    transform: translateY(-50%);
     overflow: hidden;
-    max-height: 800px;
+    float: right;
+
   }
   
   #carrito .titulo {
+
     height: 7%;
     width: 100%;
     font-size: 32px;
@@ -22,9 +24,11 @@
     justify-content: center;
     align-items: center;
     color: #393e59;
+
   }
   
-  #carrito #contenedor {
+  #contenedor {
+
     width: 100%;
     height: 65%;
     overflow: auto;
@@ -34,7 +38,7 @@
     padding: 10px 8px;
     border: 1px solid #6fbfbf5b;
     background: linear-gradient(145deg, #f3f0f0ef, #f0f0f083);
-    box-shadow: 7px 7px 14px #f7f6f6, -7px -7px 14px #f7f6f6;
+  
   }
   
   #carrito .billing {
@@ -46,9 +50,9 @@
     border-bottom: 25px;
     flex-direction: column;
     margin-top: 10px;
-    box-shadow: 0px -3px 0px 1px rgba(116, 162, 214, 0.75);
+    /* box-shadow: 0px -3px 0px 1px rgba(116, 162, 214, 0.75);
     -webkit-box-shadow: 0px -3px 0px 1px rgba(116, 162, 214, 0.75);
-    -moz-box-shadow: 0px -3px 0px 1px rgba(116, 162, 214, 0.75);
+    -moz-box-shadow: 0px -3px 0px 1px rgba(116, 162, 214, 0.75); */
   }
   
   .billing .subtotal, .billing .sending, .billing .total {
@@ -65,7 +69,7 @@
   .billing hr {
     border: none;
     height: 1px;
-    background: rgba(141, 137, 137, 0.833);
+    background: rgba(141, 137, 137);
   }
   
   .billing button {
@@ -79,12 +83,12 @@
     border: 1px solid transparent;
   }
   
-  #contenedor .producto {
+.producto {
     width: 100%;
-    height: 100px;
+    height: 60px;
     background: white;
-    border: 1px solid rgba(194, 191, 191, 0.299);
-    border-radius: 15px;
+    border: 1px solid #393e5989;
+    border-radius: 10px;
     margin-top: 5px;
     display: flex;
     align-items: center;
@@ -112,8 +116,8 @@
   }
   
   .producto img {
-    height: 100%;
-    width: 80px;
+    height: auto;
+    width: 50px;
   }
   
   .producto .descripcion {
@@ -125,3 +129,8 @@
     flex-direction: column;
     justify-content: space-around;
   }
+
+
+  .oculto {
+    transform: translateX(100%);
+    }
