@@ -96,7 +96,10 @@ const celulares = [
       precio: 1459.99,
       id: "ce10"
     },
+<<<<<<< HEAD
      
+=======
+>>>>>>> ea18582ca186e5db198e546952718fa16e6a867e
   ];
   
   // Función para generar el HTML de los celulares
