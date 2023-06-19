@@ -85,7 +85,7 @@ const celulares = [
     {
       marca: "Apple",
       modelo: "iPhone 12",
-      imagen: "../src/assets/img/celular9.jfif",
+      imagen: "./src/assets/img/celular9.jfif",
       precio: 1459.99,
       id: "ce09"
     },
@@ -96,10 +96,6 @@ const celulares = [
       precio: 1459.99,
       id: "ce10"
     },
-<<<<<<< HEAD
-     
-=======
->>>>>>> ea18582ca186e5db198e546952718fa16e6a867e
   ];
   
   // Función para generar el HTML de los celulares
