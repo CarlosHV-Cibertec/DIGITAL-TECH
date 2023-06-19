@@ -1,18 +1,18 @@
-*{
-  padding: 0;
-  margin: 0;
+@root{
+ --banner-color : #045baa;
 }
 
 #carrito {
-    /* position: absolute; */
+    position: fixed;
     width: 300px;
-    height: 97vh;
+    height: 100vh;
     border: 1px solid rgba(128, 128, 128, 0.598);
-    background: #fdfdfdf5;
+    background: #fdfdfd;
     padding: 10px;
     overflow: hidden;
     float: right;
-
+    top: 0;
+    right: 0;
   }
   
   #carrito .titulo {
@@ -79,7 +79,7 @@
     color: white;
     margin: 5px 0;
     font-size: 22px;
-    background: #01acf4;
+    background: #045baa;
     border: 1px solid transparent;
   }
   

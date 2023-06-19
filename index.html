@@ -14,11 +14,12 @@
 
     <!-- estilos -->
     <link rel="stylesheet" href="./src/css/index.css">
-    <link href="./src/css/carrito.css" rel="stylesheet"></head>
-    <link rel="stylesheet" href="./src/css/products.css">
+    <link rel="stylesheet" href="./src/css/celulares.css">
+    <!-- <link rel="stylesheet" href="./src/css/carrito.css"> -->
    
 </head>
   <body class="project-body">
+
     <header>
       <div class="top-bar">
         <div class="top-bar__content container-responsive">
@@ -27,7 +28,12 @@
             <input type="search" name="search" placeholder="Búsqueda">
           </div>
           <div  class="top-bar__login">
-            <div class="top-bar__account"><img src="./src/assets/img/user.png" alt="Icono Usuario"><a href="#"> Mi cuenta</a></div>
+            <div class="top-bar__account">
+              
+              <img src="./src/assets/img/user.png" alt="Icono Usuario">
+              
+              
+              <a href="#"> Mi cuenta</a></div>
             <div id="open_car" class="top-bar__car"><img src="./src/assets/img/shopping-cart.png" alt="Icono Carrito de compras"><a href="#">Tu Carrito</a></div>
             
           </div>
@@ -45,13 +51,86 @@
       <div class="banner"> </div>
     </header>
 
+    <main>
+      <section id="filtros">
+        <h3>Marca:</h3>
+        <ul id="marca-filtros">
+          <li>
+            <input type="checkbox" id="marca-samsung" value="Samsung">
+            <label for="marca-samsung">Samsung</label>
+          </li>
+          <li>
+            <input type="checkbox" id="marca-apple" value="Apple">
+            <label for="marca-apple">LG</label>
+          </li>
+          <li>
+            <input type="checkbox" id="marca-samsung" value="Samsung">
+            <label for="marca-samsung">Xiaomi</label>
+          </li>
+          <li>
+            <input type="checkbox" id="marca-apple" value="Apple">
+            <label for="marca-apple">Apple</label>
+          </li>
+          <li>
+            <input type="checkbox" id="marca-samsung" value="Samsung">
+            <label for="marca-samsung">Motorola</label>
+          </li>
+        </ul>
+      
+        <h3>Precio:</h3>
+        <input type="range" id="precio-filtro" min="0" max="2000" step="100" value="2000">
+        <p id="precio-valor"></p>
+      
+        <button id="aplicar-filtros-btn">Aplicar filtros</button>
+      </section>
+      <section id="celulares">
+        <!-- Agregaré los celulares dinámicamente con JavaScript -->
+      </section>
+    </main>
+    
 
-                              <!-- carrito -->
+    <!-- carrito de compras  -->
+
+    <div id="carrito"> 
+      <div class="titulo">
+        <p>x</p>
+        <h3>Carrito</h3>
+      </div>
+      <div id="contenedor">
+        
+        
+      
+        
+        
+      </div>
+      <div class="billing"> 
+        <div class="subtotal"> 
+          <p>Total </p>
+          <p>4000 $</p>
+        </div>
+        <div class="sending"> 
+          <p>Entrega </p>
+          <p>00.00$ </p>
+        </div>
+        <hr>
+        <div class="total"> 
+          <p>Total </p>
+          <p>4000 $</p>
+        </div>
+        <button>  Pagar</button>
+      </div>
+    </div>
+
+    <!-- footer -->
+    <footer>
+      <p>&copy; 2023 Tienda de celulares. Todos los derechos reservados.</p>
+    </footer>
+
     
 
 
 
-
+  <script type="text/javascript" src="./src/js/celulares.js"></script>
   <script type="text/javascript" src="./src/js/script.js"></script>
   <script type="text/javascript" src="./src/js/carrito.js"></script>
 
