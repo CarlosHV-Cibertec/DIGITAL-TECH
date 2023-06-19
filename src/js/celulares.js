@@ -121,6 +121,8 @@ const celulares = [
   // ! variables del carrito
   const prodSelecItm = document.getElementById("icnCar_itm");
   const carritoContn = document.getElementById("contenedor");
+  const subTotal = document.getElementById('subTotalprecio');
+
   const carrito = [];
   var cantProdAdd;
   var precioTotal =0;
@@ -129,6 +131,17 @@ const celulares = [
 
   // todo: Función para agregar un celular al carrito (ejemplo de implementación)
   function agregarAlCarrito(ruta, marca, modelo, precio) {
+
+        // -- añadir diseño de producto seleccionado a carrito 
+        const prodSelect = {
+          id:"CE"+setIdUnico(),
+          marca: marca,
+          modelo: modelo,
+          imagen: ruta,
+          precio: precio,
+        }
+
+        
     const addproductHTML = 
         `<div class="producto" id="${prodSelect.id}">
           <div class="imagenprod">
@@ -143,14 +156,6 @@ const celulares = [
           </div>
         </div>`;
 
-    // -- añadir diseño de producto seleccionado a carrito 
-    const prodSelect = {
-      id: "CE"+setIdUnico(),
-      marca: marca,
-      modelo: modelo,
-      imagen: ruta,
-      precio: precio,
-    }
 
     carrito.push(prodSelect);
     precioTotal += precio;
@@ -161,7 +166,7 @@ const celulares = [
 
   
   setCantProdsSelec();
-  verificarCarritoVacio(cantProdAdd);
+  verificarCarritoVacio(carrito.length);
   setSubTotal(precioTotal);
   }
   
@@ -201,7 +206,6 @@ const celulares = [
   }
 
   function setSubTotal(total){
-    const subTotal = document.getElementById('subTotalprecio');
     var numero = parseInt(subTotal.innerText);
     numero= total;
     subTotal.innerText = numero.toFixed(2) + " $";
@@ -220,8 +224,8 @@ function eliminarDelCarrito(id, precio) {
     // Actualizar la visualización del carrito y el precio total
     console.log("recibi la señal")
     removeElements(id);
-    console.log(carrito);
-
+    console.log(precioTotal);
+    subTotal.innerText = precioTotal.toFixed(2) + " $";
     // setSubTotal(precioTotal);
     // setCantProdsSelec();
     // verificarCarritoVacio(carrito.length);
