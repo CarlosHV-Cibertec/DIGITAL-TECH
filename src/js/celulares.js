@@ -96,7 +96,7 @@ const celulares = [
       precio: 1459.99,
       id: "ce10"
     },
-     git
+     
   ];
   
   // Función para generar el HTML de los celulares
