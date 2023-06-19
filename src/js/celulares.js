@@ -131,7 +131,6 @@ const celulares = [
 
   // todo: Función para agregar un celular al carrito (ejemplo de implementación)
   function agregarAlCarrito(ruta, marca, modelo, precio) {
-    // -- añadir diseño de producto seleccionado a carrito 
     const addproductHTML = 
         `<div class="producto" id="${prodSelect.id}">
           <div class="imagenprod">
@@ -145,7 +144,8 @@ const celulares = [
             <p>x</p>
           </div>
         </div>`;
-        
+
+    // -- añadir diseño de producto seleccionado a carrito 
     const prodSelect = {
       id: "CE"+setIdUnico(),
       marca: marca,
@@ -155,14 +155,11 @@ const celulares = [
     }
 
     carrito.push(prodSelect);
+    precioTotal += precio;
 
 
-
-  precioTotal += precio;
+    // -- se añade un nuevo elemento al carrito
   carritoContn.innerHTML += addproductHTML;
-  console.log(prodSelect.id);
-  console.log(carrito.length);
-  console.log(carrito);
 
   
   setCantProdsSelec();
