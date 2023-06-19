@@ -28,56 +28,56 @@ const celulares = [
     {
       marca: "Apple",
       modelo: "iPhone 12",
-      imagen: "./src/assets/img/celular1.jfif",
+      imagen: "../src/assets/img/celular1.jfif",
       precio: 1459.99,
       id: "ce01"
     },
     {
       marca: "Samsung",
       modelo: "Galaxy S21",
-      imagen: "./src/assets/img/celular2.jfif",
+      imagen: "../src/assets/img/celular2.jfif",
       precio: 999.99,
       id: "ce02"    
     },
     {
       marca: "Apple",
       modelo: "iPhone 12",
-      imagen: "./src/assets/img/celular3.jfif",
+      imagen: "../src/assets/img/celular3.jfif",
       precio: 1459.99,
       id: "ce03"
     },
     {
       marca: "Apple",
       modelo: "iPhone 12",
-      imagen: "./src/assets/img/celular4.jfif",
+      imagen: "../src/assets/img/celular4.jfif",
       precio: 1459.99,
       id: "ce04"
     },
     {
       marca: "Samsung",
       modelo: "Galaxy S21",
-      imagen: "./src/assets/img/celular5.jfif",
+      imagen: "../src/assets/img/celular5.jfif",
       precio: 999.99,
       id: "ce05"      
     },
     {
       marca: "Apple",
       modelo: "iPhone 12",
-      imagen: "./src/assets/img/celular6.jfif",
+      imagen: "../src/assets/img/celular6.jfif",
       precio: 1459.99,
       id: "ce06"
     },
     {
       marca: "Apple",
       modelo: "iPhone 12",
-      imagen: "./src/assets/img/celular7.jfif",
+      imagen: "../src/assets/img/celular7.jfif",
       precio: 1459.99,
       id: "ce07"
     },
     {
       marca: "Apple",
       modelo: "iPhone 12",
-      imagen: "./src/assets/img/celular8.jfif",
+      imagen: "../src/assets/img/celular8.jfif",
       precio: 1459.99,
       id: "ce08"
       
@@ -85,19 +85,18 @@ const celulares = [
     {
       marca: "Apple",
       modelo: "iPhone 12",
-      imagen: "./src/assets/img/celular9.jfif",
+      imagen: "../src/assets/img/celular9.jfif",
       precio: 1459.99,
       id: "ce09"
     },
     {
       marca: "Apple",
       modelo: "iPhone 12",
-      imagen: "./src/assets/img/celular10.jfif",
+      imagen: "../src/assets/img/celular10.jfif",
       precio: 1459.99,
       id: "ce10"
     },
      
-    // Agrega más objetos de celulares aquí...
   ];
   
   // Función para generar el HTML de los celulares
