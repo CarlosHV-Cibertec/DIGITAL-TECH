@@ -3,7 +3,6 @@ const marcaFiltros = document.querySelectorAll("#marca-filtros input[type='check
 const precioFiltro = document.getElementById("precio-filtro");
 const precioValor = document.getElementById("precio-valor");
 const aplicarFiltrosBtn = document.getElementById("aplicar-filtros-btn");
-const carritoContn = document.getElementById("contenedor");
 
 // Manejador de eventos para el botón "Aplicar filtros"
 aplicarFiltrosBtn.addEventListener("click", aplicarFiltros);
@@ -31,61 +30,71 @@ const celulares = [
       modelo: "iPhone 12",
       imagen: "./src/assets/img/celular1.jfif",
       precio: 1459.99,
+      id: "ce01"
     },
     {
       marca: "Samsung",
       modelo: "Galaxy S21",
       imagen: "./src/assets/img/celular2.jfif",
-      precio: 999.99
+      precio: 999.99,
+      id: "ce02"    
     },
     {
       marca: "Apple",
       modelo: "iPhone 12",
       imagen: "./src/assets/img/celular3.jfif",
-      precio: 1459.99
+      precio: 1459.99,
+      id: "ce03"
     },
     {
       marca: "Apple",
       modelo: "iPhone 12",
       imagen: "./src/assets/img/celular4.jfif",
-      precio: 1459.99
+      precio: 1459.99,
+      id: "ce04"
     },
     {
       marca: "Samsung",
       modelo: "Galaxy S21",
       imagen: "./src/assets/img/celular5.jfif",
-      precio: 999.99
-      },
+      precio: 999.99,
+      id: "ce05"      
+    },
     {
       marca: "Apple",
       modelo: "iPhone 12",
       imagen: "./src/assets/img/celular6.jfif",
-      precio: 1459.99
+      precio: 1459.99,
+      id: "ce06"
     },
     {
       marca: "Apple",
       modelo: "iPhone 12",
       imagen: "./src/assets/img/celular7.jfif",
-      precio: 1459.99
+      precio: 1459.99,
+      id: "ce07"
     },
     {
       marca: "Apple",
       modelo: "iPhone 12",
       imagen: "./src/assets/img/celular8.jfif",
-      precio: 1459.99
+      precio: 1459.99,
+      id: "ce08"
       
     },
     {
       marca: "Apple",
       modelo: "iPhone 12",
       imagen: "./src/assets/img/celular9.jfif",
-      precio: 1459.99
+      precio: 1459.99,
+      id: "ce09"
     },
     {
       marca: "Apple",
       modelo: "iPhone 12",
       imagen: "./src/assets/img/celular10.jfif",
-      precio: 1459.99
+      precio: 1459.99,
+      id: "ce10"
     },
      
     // Agrega más objetos de celulares aquí...
@@ -97,49 +106,136 @@ const celulares = [
     celularesContainer.innerHTML = "";
   
     celulares.forEach(celular => {
+ 
       const celularHTML = `
         <div class="celular">
           <img src="${celular.imagen}" alt="${celular.marca} ${celular.modelo}">
           <h3>${celular.marca} ${celular.modelo}</h3>
           <p>Precio: $${celular.precio}</p>
-          <button onclick="agregarAlCarrito(${celular.precio})">Agregar al carrito</button>
+          <button onclick="agregarAlCarrito('${celular.imagen}','${celular.marca}', '${celular.modelo}', ${celular.precio})">Agregar al carrito</button>
         </div>
       `;
       celularesContainer.innerHTML += celularHTML;
     });
   }
   
-  // Función para agregar un celular al carrito (ejemplo de implementación)
-  function agregarAlCarrito(
-    //parametros
-      descripcion,
-      imagen,
-      precio
 
-  ) {
+  // ! variables del carrito
+  const prodSelecItm = document.getElementById("icnCar_itm");
+  const carritoContn = document.getElementById("contenedor");
+  const carrito = [];
+  var cantProdAdd;
+  var precioTotal =0;
 
+  verificarCarritoVacio(carrito.length);
+
+  // todo: Función para agregar un celular al carrito (ejemplo de implementación)
+  function agregarAlCarrito(ruta, marca, modelo, precio) {
+    // -- añadir diseño de producto seleccionado a carrito 
     const addproductHTML = 
-  `
-  <div class="producto"> 
-  <div class="imagenprod">
-    <img src="${celulares.imagen}" alt="${celulares.marca} ${celulares.modelo}">
-  </div>
-  <div class="descripcion">
-      <h4>${celulares.marca} ${celulares.modelo}</h4>
-      <p>${precio} $</p>
-  </div>
-  <div class="removeProd"> 
-      <p>x</p>
-  </div>
-</div>
-  `;
+        `<div class="producto" id="${prodSelect.id}">
+          <div class="imagenprod">
+            <img src="${ruta}" alt="${marca} ${modelo}">
+          </div>
+          <div class="descripcion">
+            <h4>${marca} ${modelo}</h4>
+            <p>${precio} $</p>
+          </div>
+          <div class="removeProd" onclick="eliminarDelCarrito('${prodSelect.id}', ${prodSelect.precio})">
+            <p>x</p>
+          </div>
+        </div>`;
+        
+    const prodSelect = {
+      id: "CE"+setIdUnico(),
+      marca: marca,
+      modelo: modelo,
+      imagen: ruta,
+      precio: precio,
+    }
 
+    carrito.push(prodSelect);
+
+
+
+  precioTotal += precio;
   carritoContn.innerHTML += addproductHTML;
+  console.log(prodSelect.id);
+  console.log(carrito.length);
+  console.log(carrito);
 
-    // Implementa tu lógica para agregar el celular al carrito
-    console.log("Celular agregado al carrito. Precio: dfd " + precio);
+  
+  setCantProdsSelec();
+  verificarCarritoVacio(cantProdAdd);
+  setSubTotal(precioTotal);
   }
   
-  // Llama a la función mostrarCelulares al cargar la página
+
+  function verificarCarritoVacio(cantprod){
+    const carritoVacio =
+    `
+    <div id="alertaProducto">
+    <p>No has Añadido productos.</p>
+    </div>
+    `;
+
+    if(cantprod == 0){
+      carritoContn.innerHTML += carritoVacio;
+    }else if (cantprod == 1) {
+      removeElements('alertaProducto');
+      }else{
+        //fin
+      }
+  }
+
+  function removeElements(identifier) {
+    var remover = document.getElementById(identifier);
+    carritoContn.removeChild(remover);
+
+}
+
+
+  function setIdUnico (){
+    return cantProdAdd++;
+  }
+  
+  function setCantProdsSelec(){
+    var numero = parseInt(prodSelecItm.innerText);
+    numero++;
+    prodSelecItm.innerText = numero.toString();
+  }
+
+  function setSubTotal(total){
+    const subTotal = document.getElementById('subTotalprecio');
+    var numero = parseInt(subTotal.innerText);
+    numero= total;
+    subTotal.innerText = numero.toFixed(2) + " $";
+  }
+
+
+
+
+function eliminarDelCarrito(id, precio) {
+  const indice = carrito.findIndex(producto => producto.id === id);
+
+  if (indice !== -1) {
+    carrito.splice(indice, 1); // Eliminar el elemento del array
+    precioTotal -= precio; // Restar el precio del producto eliminado al precio total
+
+    // Actualizar la visualización del carrito y el precio total
+    console.log("recibi la señal")
+    removeElements(id);
+    console.log(carrito);
+
+    // setSubTotal(precioTotal);
+    // setCantProdsSelec();
+    // verificarCarritoVacio(carrito.length);
+  }
+}
+
+
+
+
+  //mostrarCelulares al cargar la página
   mostrarCelulares();
   
