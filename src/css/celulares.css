@@ -9,7 +9,7 @@
     font-size: 30px;
   }
   
-  #celulares {
+  #tablets , #computadoras , #celulares , #laptops {
     width: 85%;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -54,22 +54,22 @@
     margin: 10px auto;
   }
   
-  .celular {
+  .tablet , .computadora , .celular , .laptop {
     border: 1px solid #ccc;
     padding: 10px;
     text-align: center;
   }
   
-  .celular img {
-    width: 150px;
-    height: 170px;
+  .tablet img, .computadora img, .celular img, .laptop img {
+    width: 190px;
+    height: 180px;
     object-fit: cover;
   }
-  .celular h3 {
+  .tablet h3, .computadora h3, .celular h3, .laptop h3 {
     margin: 10px 0;
   }
   
-  .celular p {
+  .tablet p, .computadora p, .celular p, .laptop p {
     margin: 0;
   }
   
