@@ -28,6 +28,7 @@
     <link rel="stylesheet" href="./src/css/index.css" />
     <link rel="stylesheet" href="./src/css/celulares.css" />
     <link rel="stylesheet" href="./src/css/carrito.css" />
+    <link rel="stylesheet" href="./src/css/compus.css" />
   </head>
 
   <body class="project-body">
@@ -39,11 +40,16 @@
             <p>Digital_Tech</p>
           </div>
           <div class="top-bar__input-search">
-            <input type="search" name="search" placeholder="Búsqueda" />
+            <input
+              id="search"
+              type="search"
+              name="search"
+              placeholder="Búsqueda"
+            />
           </div>
           <div class="top-bar__login">
             <!-- itm inicio de sesion y cuenta -->
-            <div class="top-bar__account">
+            <div class="top-bar__account" onclick="toggleDiv('cont_box')">
               <img src="./src/assets/img/user.png" alt="Icono Usuario" />
               <a href="#"> Mi cuenta</a>
             </div>
@@ -79,6 +85,15 @@
       </nav>
       <div class="banner"></div>
     </header>
+
+    <!-- login -->
+    <div id="cont_box">
+      <div class="cont_login">
+        <a href="#" onclick="toggleDiv('cont_box')">&times;</a>
+        <h1>iniciar sesion</h1>
+        <span class="login___circuitMask"> </span>
+      </div>
+    </div>
 
     <main>
       <section id="filtros">
