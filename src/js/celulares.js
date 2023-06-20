@@ -218,17 +218,16 @@ function eliminarDelCarrito(id, precio) {
   const indice = carrito.findIndex(producto => producto.id === id);
 
   if (indice !== -1) {
-    carrito.splice(indice, 1); // Eliminar el elemento del array
-    precioTotal -= precio; // Restar el precio del producto eliminado al precio total
+    carrito.splice(indice, 1); 
+    precioTotal -= precio; 
 
     // Actualizar la visualización del carrito y el precio total
     console.log("recibi la señal")
-    removeElements(id);
-    console.log(precioTotal);
+    
     subTotal.innerText = precioTotal.toFixed(2) + " $";
     // setSubTotal(precioTotal);
     // setCantProdsSelec();
-    // verificarCarritoVacio(carrito.length);
+    verificarCarritoVacio(carrito.length);
   }
 }
 
