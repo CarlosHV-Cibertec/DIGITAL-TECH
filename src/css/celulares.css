@@ -1,81 +1,92 @@
+main {
+  padding: 10px 0;
+  display: flex;
+}
+h2 {
+  margin-top: 40px;
+  text-align: center;
+  font-size: 30px;
+}
 
-  main {
-    padding: 10px 0;
-    display: flex;
-  }
-  h2 {
-    margin-top: 40px;
-    text-align: center;
-    font-size: 30px;
-  }
-  
-  #tablets , #computadoras , #celulares , #laptops {
-    width: 85%;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
-  }
+#contenedorProductos {
+  width: 85%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
 
-  #filtros {
-    margin-right: 15px;
-    padding: 20px;
-    width: 15%;
-    height: 600px;
-    border: 2px solid black;
-  }
-  
-  #filtros h3 {
-    margin-top: 10px;
-    font-size: 25px;
-  }
-  
-  #marca-filtros {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  #marca-filtros li {
-    margin-bottom: 5px;
-  }
-  
-  #precio-filtro {
-    width: 70%;
-    margin: 0 50px;
-  }
-  
-  #precio-valor {
-    text-align: center;
-    font-weight: bold;
-  }
-  
-  #aplicar-filtros-btn {
-    display: block;
-    margin: 10px auto;
-  }
-  
-  .tablet , .computadora , .celular , .laptop {
-    border: 1px solid #ccc;
-    padding: 10px;
-    text-align: center;
-  }
-  
-  .tablet img, .computadora img, .celular img, .laptop img {
-    width: 190px;
-    height: 180px;
-    object-fit: cover;
-  }
-  .tablet h3, .computadora h3, .celular h3, .laptop h3 {
-    margin: 10px 0;
-  }
-  
-  .tablet p, .computadora p, .celular p, .laptop p {
-    margin: 0;
-  }
-  
-  button{
-    background-color: black;
-    color: white;
-    padding: 5px 10px;
-    border-radius: 10px;
-  }
+#filtros {
+  margin-right: 15px;
+  padding: 20px;
+  width: 15%;
+  height: 600px;
+  border: 2px solid black;
+}
+
+#filtros h3 {
+  margin-top: 10px;
+  font-size: 25px;
+}
+
+#marca-filtros {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#marca-filtros li {
+  margin-bottom: 5px;
+}
+
+#precio-filtro {
+  width: 70%;
+  margin: 0 50px;
+}
+
+#precio-valor {
+  text-align: center;
+  font-weight: bold;
+}
+
+#aplicar-filtros-btn {
+  display: block;
+  margin: 10px auto;
+}
+
+.tablet,
+.computadora,
+.celular,
+.laptop {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+}
+
+.tablet img,
+.computadora img,
+.celular img,
+.laptop img {
+  width: 190px;
+  height: 180px;
+  object-fit: cover;
+}
+.tablet h3,
+.computadora h3,
+.celular h3,
+.laptop h3 {
+  margin: 10px 0;
+}
+
+.tablet p,
+.computadora p,
+.celular p,
+.laptop p {
+  margin: 0;
+}
+
+button {
+  background-color: black;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 10px;
+}
