@@ -2,13 +2,20 @@
 body {
   overflow-x: hidden;
 }
+/* 
+header{
+  height: 56px;
+  display: flex;
+  flex-direction: column;
+} */
 
 .top-bar {
   background-color: #0d3878;
+   
 }
 
 .top-bar__content {
-  height: 56px;
+ 
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -48,12 +55,12 @@ body {
 
 .top-bar__input-search input[type="search"] {
   width: 300px;
-  height: 30px;
+  height: 35px;
   font-family: "Montserrat", sans-serif;
-  font-size: 12px;
+  font-size: 14px;
   outline: none;
+  padding: 0 5px;
   border-radius: 12px;
-  text-align: center;
   color: #1863a8;
 }
 
@@ -72,7 +79,7 @@ body {
 
 .top-bar__car:hover,
 .top-bar__account:hover,
-.top-bar__logo:hover {
+.top-bar__logo:hover{
   /* transform: scale(1); */
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
@@ -91,7 +98,7 @@ body {
 
 .nav-bar {
   background-color: #1863a8;
-  height: 35px;
+  height: 30px;
 }
 
 .nav-bar ul {
@@ -102,7 +109,7 @@ body {
 
 .nav-bar li {
   list-style: none;
-  margin: 10px 0;
+  margin: 0 10px;
   font-size: 12px;
   width: auto;
   height: 30px;

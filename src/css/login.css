@@ -3,7 +3,10 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background: #eef1f3;
+  /* background: #eef1f39f; */
+  background: #2C3E50;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #4CA1AFbc, #2c3e50bc);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #4CA1AFbc, #2c3e50bc); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   position: fixed;
   top: 0;
   left: 0;
@@ -24,8 +27,7 @@
 }
 
 .cont_login h1 {
-  color: white;
-  font-size: 14px;
+  font-size: 26px;
   text-align: center;
 }
 
