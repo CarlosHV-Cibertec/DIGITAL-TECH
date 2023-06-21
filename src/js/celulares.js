@@ -446,14 +446,4 @@ function eliminarDelCarrito(id, precio) {
   }
 }
 
-//mostrarCelulares al cargar la página
-mostrarCelulares();
-
-//mostrarTablets al cargar la página
-mostrarTablets();
-
-//mostrarComputadoras al cargar la página
-mostrarComputadoras();
-
-//mostrarComputadoras al cargar la página
-mostrarLaptops();
+//code

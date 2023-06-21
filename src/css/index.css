@@ -57,7 +57,12 @@ body {
   color: #1863a8;
 }
 
+<<<<<<< HEAD
 
+=======
+input[type="search"]::placeholder {
+}
+>>>>>>> 7e0cd73c00693865d3c0b95d9ab65974e9f90256
 
 .top-bar__login {
   display: flex;
