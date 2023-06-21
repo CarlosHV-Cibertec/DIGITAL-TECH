@@ -99,12 +99,14 @@ header{
 .nav-bar {
   background-color: #1863a8;
   height: 30px;
+
 }
 
 .nav-bar ul {
   margin: 0;
   padding: 0;
-  gap: 7px;
+  /* gap: 7px; */
+  height: 30px;
 }
 
 .nav-bar li {
@@ -112,12 +114,13 @@ header{
   margin: 0 10px;
   font-size: 12px;
   width: auto;
-  height: 30px;
-  background: salmon;
+  
 }
 
 .nav-bar li a {
   color: #f0f2f2;
+  background: aqua;
+  height: 30px;
 }
 
 .nav-bar li a:hover {
