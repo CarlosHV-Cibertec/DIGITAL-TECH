@@ -445,3 +445,5 @@ function eliminarDelCarrito(id, precio) {
     verificarCarritoVacio(carrito.length);
   }
 }
+
+//code
