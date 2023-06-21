@@ -343,6 +343,7 @@ function mostrarProductos(identifier, arrayproductos) {
 
 //pasamos los parametros para que se añandan los array independiente del productos
 mostrarProductos(contenedorProductos, celulares);
+mostrarProductos(contenedorProductos, computadoras);
 
 // ! variables del carrito
 const prodSelecItm = document.getElementById("icnCar_itm");
@@ -366,7 +367,8 @@ function agregarAlCarrito(ruta, marca, modelo, precio) {
     precio: precio,
   };
 
-  const addproductHTML = `<div class="producto" id="${prodSelect.id}">
+  const addproductHTML = `
+          <div class="producto" id="${prodSelect.id}">
           <div class="imagenprod">
             <img src="${ruta}" alt="${marca} ${modelo}">
           </div>

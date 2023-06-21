@@ -85,6 +85,50 @@
       </div>
     </div>
 
+    <main>
+      <section id="filtros">
+        <h3>Marca:</h3>
+        <ul id="marca-filtros">
+          <li>
+            <input type="checkbox" id="marca-samsung" value="Samsung" />
+            <label for="marca-samsung">Samsung</label>
+          </li>
+          <li>
+            <input type="checkbox" id="marca-apple" value="Apple" />
+            <label for="marca-apple">LG</label>
+          </li>
+          <li>
+            <input type="checkbox" id="marca-samsung" value="Samsung" />
+            <label for="marca-samsung">Xiaomi</label>
+          </li>
+          <li>
+            <input type="checkbox" id="marca-apple" value="Apple" />
+            <label for="marca-apple">Apple</label>
+          </li>
+          <li>
+            <input type="checkbox" id="marca-samsung" value="Samsung" />
+            <label for="marca-samsung">Motorola</label>
+          </li>
+        </ul>
+
+        <h3>Precio:</h3>
+        <input
+          type="range"
+          id="precio-filtro"
+          min="0"
+          max="2000"
+          step="100"
+          value="2000"
+        />
+        <p id="precio-valor"></p>
+
+        <button id="aplicar-filtros-btn">Aplicar filtros</button>
+      </section>
+
+      <section id="contenedorProductos">
+        <!-- -- aqui iran todos los productos desde js- los datos seran extraidos de un array -->
+      </section>
+    </main>
 
     <!-- footer -->
     <footer>
@@ -107,6 +151,11 @@
         </div>
         <div class="contenidos">
           <p class="c_titulo">Metodos de pago :</p>
+          <!-- <ul>
+<li><a href="">indice</a></li>
+<li><a href="">indice</a></li>
+<li><a href="">indice</a></li>
+</ul> -->
           <img src="./src/assets/img/metodos.png" alt="metodos" />
         </div>
       </div>
@@ -118,8 +167,8 @@
       </div>
     </footer>
 
-
     <!--  carrito de compras  -->
+
     <div id="carrito">
       <div class="titulo">
         <a href="#" onclick="toggleDiv('carrito')">&times;</a>
