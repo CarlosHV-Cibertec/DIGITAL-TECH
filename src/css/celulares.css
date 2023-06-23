@@ -8,7 +8,7 @@ h2 {
   font-size: 30px;
 }
 
-#contenedorProductos {
+#celulares,#tablets,#computadoras,#laptops {
   width: 85%;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));

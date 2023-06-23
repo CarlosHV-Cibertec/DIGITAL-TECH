@@ -1,13 +1,7 @@
 @import url(template.css);
-/* body {
+body {
   overflow-x: hidden;
-} */
-/* 
-header{
-  height: 56px;
-  display: flex;
-  flex-direction: column;
-} */
+}
 
 .top-bar {
   background-color: #0d3878;

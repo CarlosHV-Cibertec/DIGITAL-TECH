@@ -4,9 +4,13 @@ const precioFiltro = document.getElementById("precio-filtro");
 const precioValor = document.getElementById("precio-valor");
 const aplicarFiltrosBtn = document.getElementById("aplicar-filtros-btn");
 
+// ! buscamos el id donde pondremos los productos:
+const contenedorProductos = document.getElementById("celulares");
+
 // Manejador de eventos para el botón "Aplicar filtros"
 aplicarFiltrosBtn.addEventListener("click", aplicarFiltros);
 
+console.log('hola');
 
 // Función para aplicar los filtros
 function aplicarFiltros() {
@@ -17,7 +21,7 @@ function aplicarFiltros() {
   const precioMaximo = precioFiltro.value;
 
   // Realizar lógica de filtrado según las marcas seleccionadas y el precio máximo
-  
+  // ...
 
   // Ejemplo de salida
   console.log("Marcas seleccionadas:", marcasSeleccionadas);
@@ -320,43 +324,24 @@ const tablets = [
   },
 ];
 
-// ! buscamos el id donde pondremos los productos:
-
-var section = document.getElementsByTagName("section")[1];
-
-// Obtener el valor del ID
-var contenedorProductos = section.id;
-
-// creacion de array de los productos a mostrar
-var arrayproductos = [];
-
-// ! seleccionamos el producto segun el id del contenedor, permite uso de multiples paginas. 100%
-switch (contenedorProductos) {
-
-  case "tablets":
-    arrayproductos = tablets;
-    
-    break;
-    case "laptops":
-      arrayproductos = laptops;
-  
-    break;
-    case "computadoras":
-      arrayproductos = computadoras;
-
-    break;
-  default:
-    arrayproductos = celulares;
-
-    break;
-
-}
 
 
-//  -- function simpleficada: se usan parametros identifier(identificador de un div), arrayproductos(se da un array de productos para ser mostrad)
-function mostrarProducto(identifier, arrayproductos) {
-  const contenido = document.getElementById(identifier)
-  contenido.innerHTML = "";
+// -- function simpleficada: se usan parametros identifier(identificador de un div), arrayproductos(se da un array de productos para ser mostrad)
+function mostrarProductos(identifier, arrayproductos) {
+  switch (identifier) {
+    case "tablets":
+      
+      break;
+      case "laptops":
+      
+      break;
+      case "computadoras":
+      
+      break;
+    default:
+      break;
+  }
+  contenedorProductos.innerHTML = "";
 
   arrayproductos.forEach((celular) => {
     const diseñoProducto = `
@@ -367,15 +352,26 @@ function mostrarProducto(identifier, arrayproductos) {
             <button onclick="agregarAlCarrito('${celular.imagen}','${celular.marca}', '${celular.modelo}', ${celular.precio})">Agregar al carrito</button>
           </div>
         `;
-        //--colocara los productos mediante innerHTML
-        contenido.innerHTML += diseñoProducto;
-
+    identifier.innerHTML += diseñoProducto;
   });
 }
 
+//pasamos los parametros para que se añandan los array independiente del productos
+mostrarProductos(contenedorProductos, celulares);
+mostrarProductos(contenedorProductos, computadoras);
+mostrarProductos(contenedorProductos, tablets);
 
-// !ejecutamos la funcion que colocara los productos mediante innerHTML
-mostrarProducto(contenedorProductos,arrayproductos);
+
+
+
+
+
+
+
+
+
+
+
 
 
 

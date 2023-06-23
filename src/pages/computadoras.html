@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es-PE">
+
+<head>
+    <title>Digital TECH | Computadoras</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="title" content="Digital TECH | Venta de productos electrónicos" />
+    <link rel="canonical" href="">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css?family=Barlow:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&amp;display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+        rel="stylesheet">
+
+
+    <!-- estilos -->
+
+
+    <!-- --estilos por seccion: -->
+    <link rel="stylesheet" href="../css/scrollbarCSS.css">
+
+    <link rel="stylesheet" href="../css/header.css" />
+    <link rel="stylesheet" href="../css/celulares.css" />
+    <link rel="stylesheet" href="../css/carrito.css" />
+    <link rel="stylesheet" href="../css/login.css" />
+    <link rel="stylesheet" href="../css/footer.css">
+
+    <!-- <link rel="stylesheet" href="../css/index.css" /> -->
+
+
+</head>
+
+<body>
+
+    <header>
+        <div class="top-bar">
+            <div class="top-bar__content  container-responsive">
+                <div class="top-bar__logo">
+                    <img src="../assets/img/DigitalT300.jpg" alt="" />
+                    <p>Digital_Tech</p>
+                </div>
+                <div class="top-bar__input-search">
+                    <!-- barra de busqueda -->
+                    <input id="search" type="search" name="search" placeholder="Búsqueda" />
+                </div>
+                <div class="top-bar__login">
+                    <!--  -- itm inicio de sesion y cuenta -->
+                    <div class="top-bar__account" onclick="toggleDiv('cont_box_login')">
+                        <img src="../assets/img/user.png" alt="Icono Usuario" />
+                        <a href="#"> Mi cuenta</a>
+                    </div>
+                    <!-- -- carrito de compras -->
+                    <div id="open_car" class="top-bar__car" onclick="toggleDiv('carrito')">
+                        <div id="icnCar">
+                            <img src="../assets/img/shopping-cart.png" alt="Icono Carrito de compras" />
+                            <span id="icnCar_itm">0</span>
+                        </div>
+                        <div>
+                            <a href="#">Tu Carrito</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- --fin de botones -->
+            </div>
+        </div>
+        <nav class="nav-bar">
+            <ul>
+                <li><a href="../../index.html">Inicio</a></li>
+                <li><a href="../pages/celulares.html">Celulares</a></li>
+                <li><a href="../pages/computadoras.html">Computadoras</a></li>
+                <li><a href="../pages/laptops.html">Laptops</a></li>
+                <li><a href="../pages/tablets.html">Tablets</a></li>
+            </ul>
+        </nav>
+        <!-- <div class="banner"></div> -->
+    </header>
+
+
+    <!-- login -->
+    <div id="cont_box_login">
+        <div class="cont_login">
+            <a href="#" onclick="toggleDiv('cont_box_login')">&times;</a>
+            <h1>iniciar sesion</h1>
+            <span class="login___circuitMask"> </span>
+        </div>
+    </div>
+
+    <!-- --main -->
+    <h2>CELULARES:</h2>
+    <main>
+        <section id="filtros">
+            <h3>Marca:</h3>
+            <ul id="marca-filtros">
+                <li>
+                    <input type="checkbox" id="marca-samsung" value="Samsung">
+                    <label for="marca-samsung">Samsung</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="marca-apple" value="Apple">
+                    <label for="marca-apple">LG</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="marca-samsung" value="Samsung">
+                    <label for="marca-samsung">Xiaomi</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="marca-apple" value="Apple">
+                    <label for="marca-apple">Apple</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="marca-samsung" value="Samsung">
+                    <label for="marca-samsung">Motorola</label>
+                </li>
+            </ul>
+
+            <h3>Precio:</h3>
+            <input type="range" id="precio-filtro" min="0" max="2000" step="100" value="2000">
+            <p id="precio-valor"></p>
+
+            <button id="aplicar-filtros-btn">Aplicar filtros</button>
+        </section>
+        <section id="computadoras">
+            <!-- Agregaré los celulares dinámicamente con JavaScript -->
+        </section>
+    </main>
+
+
+    <!-- --footer -->
+    <footer>
+        <div class="f_contenido">
+            <div class="contenidos">
+                <p class="c_titulo">Ir a:</p>
+                <ul>
+                    <li><a href="">indice</a></li>
+                    <li><a href="">indice</a></li>
+                    <li><a href="">indice</a></li>
+                </ul>
+            </div>
+            <div class="contenidos">
+                <p class="c_titulo">Nosotros :</p>
+                <ul>
+                    <li><a href="">indice</a></li>
+                    <li><a href="">indice</a></li>
+                    <li><a href="">indice</a></li>
+                </ul>
+            </div>
+            <div class="contenidos">
+                <p class="c_titulo">Metodos de pago :</p>
+                <img src="../assets/img/metodos.png" alt="metodos" />
+            </div>
+        </div>
+        <div class="copyt">
+            <p>
+                &copy; 2023 Productos digitales Digital_Tech. Todos los derechos
+                reservados.
+            </p>
+        </div>
+
+
+    </footer>
+
+    <!--  carrito de compras  -->
+    <div id="carrito">
+        <div class="titulo">
+            <a href="#" onclick="toggleDiv('carrito')">&times;</a>
+            <h3>Carrito</h3>
+        </div>
+        <div id="contenedor"></div>
+
+        <div class="billing">
+            <div class="subtotal">
+                <p>Total</p>
+                <p id="subTotalprecio">0</p>
+            </div>
+            <div class="sending">
+                <p>Entrega</p>
+                <p>00.00$</p>
+            </div>
+            <hr />
+            <div class="total">
+                <p>Total</p>
+                <p>4000 $</p>
+            </div>
+            <button>Pagar</button>
+        </div>
+    </div>
+
+
+    <!-- --enlaces javascript -->
+    <script type="text/javascript" src="../js/cerrarDivId.js"></script>
+
+    <script type="text/javascript" src="../js/celulares.js"></script>
+    <script type="text/javascript" src="../js/script.js"></script>
+    <!-- <script type="text/javascript" src="../js/carrito.js"></script> -->
+
+
+</body>
+
+</html>
