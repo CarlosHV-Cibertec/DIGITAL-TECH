@@ -24,13 +24,13 @@
 
   <!-- --estilos por seccion: -->
   <link rel="stylesheet" href="../css/scrollbarCSS.css">
+  <link rel="stylesheet" href="../css/registro.css">
   <link rel="stylesheet" href="../css/header.css" />
   <link rel="stylesheet" href="../css/celulares.css" />
   <link rel="stylesheet" href="../css/carrito.css" />
   <link rel="stylesheet" href="../css/login.css" />
   <link rel="stylesheet" href="../css/footer.css">
 
-  <!-- <link rel="stylesheet" href="../css/index.css" /> -->
 
 
 </head>
@@ -80,12 +80,75 @@
     <!-- <div class="banner"></div> -->
   </header>
 
-
   <!-- login -->
   <div id="cont_box_login">
     <div class="cont_login">
-      <a href="#" onclick="toggleDiv('cont_box_login')">&times;</a>
-      <h1>iniciar sesion</h1>
+
+      <div class="wrapper">
+
+        <span class="icon-close" onclick="toggleDiv('cont_box_login')">
+          <ion-icon name="close"></ion-icon>
+        </span>
+        <div class="from-box login">
+          <h2>Iniciar Sesion</h2>
+          <from action="#">
+            <div class="input-box">
+              <span class="icon"><ion-icon name="mail"></ion-icon></span>
+              <input type="text" required>
+              <label>Email</label>
+            </div>
+            <div class="input-box">
+              <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+              <input type="password" required>
+              <label>Password</label>
+            </div>
+
+            <div class="remember-forgot">
+              <div class="forgot-item">
+                <input type="checkbox">
+                <label>Recordar contraseña</label>
+              </div>
+              <a href="#">¿Has olvidado tu contraseña?</a>
+            </div>
+            <button type="submit" class="btn">Login</button>
+            <div class="login-register">
+              <p>¿No tienes una cuenta? <a href="#" class="register-link">Registrate</a></p>
+            </div>
+          </from>
+        </div>
+
+        <div class="from-box register">
+          <h2>Crear Cuenta</h2>
+          <from action="#">
+            <div class="input-box">
+              <span class="icon"><ion-icon name="person"></ion-icon></span>
+              <input type="text" required>
+              <label>Nombre de Usuario</label>
+            </div>
+            <div class="input-box">
+              <span class="icon"><ion-icon name="mail"></ion-icon></span>
+              <input type="text" required>
+              <label>Email</label>
+            </div>
+            <div class="input-box">
+              <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+              <input type="password" required>
+              <label>Password</label>
+            </div>
+            <div class="remember-forgot">
+              <input type="checkbox">
+              <label>Estoy de acuerdo con los términos y condiciones</label>
+            </div>
+            <button type="submit" class="btn">Registrarse</button>
+            <div class="login-register">
+              <p>¿Ya tienes una cuenta? <a href="#" class="login-link">Registrate</a></p>
+            </div>
+          </from>
+        </div>
+
+
+      </div>
+
       <span class="login___circuitMask"> </span>
     </div>
   </div>
@@ -193,10 +256,13 @@
 
   <!-- --enlaces javascript -->
   <script type="text/javascript" src="../js/cerrarDivId.js"></script>
-
   <script type="text/javascript" src="../js/celulares.js"></script>
   <script type="text/javascript" src="../js/script.js"></script>
-  <!-- <script type="text/javascript" src="../js/carrito.js"></script> -->
+
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+  <script type="text/javascript" src="../js/registro.js"></script>
 
 
 </body>

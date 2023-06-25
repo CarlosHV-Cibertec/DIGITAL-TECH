@@ -4,6 +4,14 @@ const precioFiltro = document.getElementById("precio-filtro");
 const precioValor = document.getElementById("precio-valor");
 const aplicarFiltrosBtn = document.getElementById("aplicar-filtros-btn");
 
+var section = document.getElementsByTagName("section")[1];
+
+// Obtener el valor del ID
+var contenedorProductos = section.id;
+
+// creacion de array de los productos a mostrar
+var arrayproductos = [];
+
 // Manejador de eventos para el botón "Aplicar filtros"
 aplicarFiltrosBtn.addEventListener("click", aplicarFiltros);
 
@@ -17,11 +25,19 @@ function aplicarFiltros() {
   const precioMaximo = precioFiltro.value;
 
   // Realizar lógica de filtrado según las marcas seleccionadas y el precio máximo
-  
+
 
   // Ejemplo de salida
   console.log("Marcas seleccionadas:", marcasSeleccionadas);
   console.log("Precio máximo:", precioMaximo);
+}
+
+// -- rutas de acceso a las imagenes
+
+var pagesImg = "./src/assets/";
+
+if (contenedorProductos !== "indice") {
+  pagesImg = "../assets/"
 }
 
 // Datos de ejemplo de celulares
@@ -29,70 +45,70 @@ const celulares = [
   {
     marca: "Apple",
     modelo: "iPhone 12",
-    imagen: "../assets/img/celular1.jfif",
+    imagen: pagesImg + "img/celular1.jfif",
     precio: 1459.99,
     id: "ce01",
   },
   {
     marca: "Samsung",
     modelo: "Galaxy S21",
-    imagen: "../assets/img/celular2.jfif",
+    imagen: pagesImg + "img/celular2.jfif",
     precio: 999.99,
     id: "ce02",
   },
   {
     marca: "Apple",
     modelo: "iPhone 12",
-    imagen: "../assets/img/celular3.jfif",
+    imagen: pagesImg + "img/celular3.jfif",
     precio: 1459.99,
     id: "ce03",
   },
   {
     marca: "Apple",
     modelo: "iPhone 12",
-    imagen: "../assets/img/celular4.jfif",
+    imagen: pagesImg + "img/celular4.jfif",
     precio: 1459.99,
     id: "ce04",
   },
   {
     marca: "Samsung",
     modelo: "Galaxy S21",
-    imagen: "../assets/img/celular5.jfif",
+    imagen: pagesImg + "img/celular5.jfif",
     precio: 999.99,
     id: "ce05",
   },
   {
     marca: "Apple",
     modelo: "iPhone 12",
-    imagen: "../assets/img/celular6.jfif",
+    imagen: pagesImg + "img/celular6.jfif",
     precio: 1459.99,
     id: "ce06",
   },
   {
     marca: "Apple",
     modelo: "iPhone 12",
-    imagen: "../assets/img/celular7.jfif",
+    imagen: pagesImg + "img/celular7.jfif",
     precio: 1459.99,
     id: "ce07",
   },
   {
     marca: "Apple",
     modelo: "iPhone 12",
-    imagen: "../assets/img/celular8.jfif",
+    imagen: pagesImg + "img/celular8.jfif",
     precio: 1459.99,
     id: "ce08",
   },
   {
     marca: "Apple",
     modelo: "iPhone 12",
-    imagen: "../assets/img/celular9.jfif",
+    imagen: pagesImg + "img/celular9.jfif",
     precio: 1459.99,
     id: "ce09",
   },
   {
     marca: "Apple",
     modelo: "iPhone 12",
-    imagen: "../assets/img/celular10.jfif",
+    imagen: pagesImg + "img/celular10.jfif",
     precio: 1459.99,
     id: "ce10",
   },
@@ -103,70 +119,70 @@ const computadoras = [
   {
     marca: "LOLJ",
     modelo: "php 3",
-    imagen: "../assets/img/pc1.jpg",
+    imagen: pagesImg + "img/pc1.jpg",
     precio: 4500.99,
     id: "co01",
   },
   {
     marca: "Samsung",
     modelo: "Galaxy S21",
-    imagen: "../assets/img/pc2.jfif",
+    imagen: pagesImg + "img/pc2.jfif",
     precio: 999.99,
     id: "co02",
   },
   {
     marca: "Apple",
     modelo: "iPhone 12",
-    imagen: "../assets/img/pc3.jfif",
+    imagen: pagesImg + "img/pc3.jfif",
     precio: 1459.99,
     id: "co03",
   },
   {
     marca: "Apple",
     modelo: "iPhone 12",
-    imagen: "../assets/img/pc4.jfif",
+    imagen: pagesImg + "img/pc4.jfif",
     precio: 1459.99,
     id: "co04",
   },
   {
     marca: "Samsung",
     modelo: "Galaxy S21",
-    imagen: "../assets/img/pc1.jpg",
+    imagen: pagesImg + "img/pc1.jpg",
     precio: 999.99,
     id: "co05",
   },
   {
     marca: "Apple",
     modelo: "iPhone 12",
-    imagen: "../assets/img/pc2.jfif",
+    imagen: pagesImg + "img/pc2.jfif",
     precio: 1459.99,
     id: "co06",
   },
   {
     marca: "Apple",
     modelo: "iPhone 12",
-    imagen: "../assets/img/pc3.jfif",
+    imagen: pagesImg + "img/pc3.jfif",
     precio: 1459.99,
     id: "co07",
   },
   {
     marca: "Apple",
     modelo: "iPhone 12",
-    imagen: "../assets/img/pc4.jfif",
+    imagen: pagesImg + "img/pc4.jfif",
     precio: 1459.99,
     id: "co08",
   },
   {
     marca: "Apple",
     modelo: "iPhone 12",
-    imagen: "../assets/img/pc1.jpg",
+    imagen: pagesImg + "img/pc1.jpg",
     precio: 1459.99,
     id: "co09",
   },
   {
     marca: "Apple",
     modelo: "iPhone 12",
-    imagen: "../assets/img/pc2.jfif",
+    imagen: pagesImg + "img/pc2.jfif",
     precio: 1459.99,
     id: "co10",
   },
@@ -177,70 +193,70 @@ const laptops = [
   {
     marca: "LOLJ",
     modelo: "php 3",
-    imagen: "../assets/img/laptop1.jpg",
+    imagen: pagesImg + "img/laptop1.jpg",
     precio: 4500.99,
     id: "co01",
   },
   {
     marca: "Samsung",
     modelo: "Galaxy S21",
-    imagen: "../assets/img/laptop2.jfif",
+    imagen: pagesImg + "img/laptop2.jfif",
     precio: 999.99,
     id: "co02",
   },
   {
     marca: "Apple",
     modelo: "iPhone 12",
-    imagen: "../assets/img/laptop3.jpg",
+    imagen: pagesImg + "img/laptop3.jpg",
     precio: 1459.99,
     id: "co03",
   },
   {
     marca: "Apple",
     modelo: "iPhone 12",
-    imagen: "../assets/img/laptop4.jpg",
+    imagen: pagesImg + "img/laptop4.jpg",
     precio: 1459.99,
     id: "co04",
   },
   {
     marca: "Samsung",
     modelo: "Galaxy S21",
-    imagen: "../assets/img/laptop5.jpg",
+    imagen: pagesImg + "img/laptop5.jpg",
     precio: 999.99,
     id: "co05",
   },
   {
     marca: "Apple",
     modelo: "iPhone 12",
-    imagen: "../assets/img/laptop6.jpg",
+    imagen: pagesImg + "img/laptop6.jpg",
     precio: 1459.99,
     id: "co06",
   },
   {
     marca: "Apple",
     modelo: "iPhone 12",
-    imagen: "../assets/img/laptop7.jfif",
+    imagen: pagesImg + "img/laptop7.jfif",
     precio: 1459.99,
     id: "co07",
   },
   {
     marca: "Apple",
     modelo: "iPhone 12",
-    imagen: "../assets/img/laptop8.jfif",
+    imagen: pagesImg + "img/laptop8.jfif",
     precio: 1459.99,
     id: "co08",
   },
   {
     marca: "Apple",
     modelo: "iPhone 12",
-    imagen: "../assets/img/laptop9.jfif",
+    imagen: pagesImg + "img/laptop9.jfif",
     precio: 1459.99,
     id: "co09",
   },
   {
     marca: "Apple",
     modelo: "iPhone 12",
-    imagen: "../assets/img/laptop10.jfif",
+    imagen: pagesImg + "img/laptop10.jfif",
     precio: 1459.99,
     id: "co10",
   },
@@ -251,70 +267,70 @@ const tablets = [
   {
     marca: "LOLJ",
     modelo: "php 3",
-    imagen: "../assets/img/tablet1.jfif",
+    imagen: pagesImg + "img/tablet1.jfif",
     precio: 4500.99,
     id: "co01",
   },
   {
     marca: "Samsung",
     modelo: "Galaxy S21",
-    imagen: "../assets/img/tablet2.jpg",
+    imagen: pagesImg + "img/tablet2.jpg",
     precio: 999.99,
     id: "co02",
   },
   {
     marca: "Apple",
     modelo: "iPhone 12",
-    imagen: "../assets/img/tablet3.jfif",
+    imagen: pagesImg + "img/tablet3.jfif",
     precio: 1459.99,
     id: "co03",
   },
   {
     marca: "Apple",
     modelo: "iPhone 12",
-    imagen: "../assets/img/tablet2.jpg",
+    imagen: pagesImg + "img/tablet2.jpg",
     precio: 1459.99,
     id: "co04",
   },
   {
     marca: "Samsung",
     modelo: "Galaxy S21",
-    imagen: "../assets/img/tablet1.jfif",
+    imagen: pagesImg + "img/tablet1.jfif",
     precio: 999.99,
     id: "co05",
   },
   {
     marca: "Apple",
     modelo: "iPhone 12",
-    imagen: "../assets/img/tablet3.jfif",
+    imagen: pagesImg + "img/tablet3.jfif",
     precio: 1459.99,
     id: "co06",
   },
   {
     marca: "Apple",
     modelo: "iPhone 12",
-    imagen: "../assets/img/tablet7.jpg",
+    imagen: pagesImg + "img/tablet7.jpg",
     precio: 1459.99,
     id: "co07",
   },
   {
     marca: "Apple",
     modelo: "iPhone 12",
-    imagen: "../assets/img/tablet1.jfif",
+    imagen: pagesImg + "img/tablet1.jfif",
     precio: 1459.99,
     id: "co08",
   },
   {
     marca: "Apple",
     modelo: "iPhone 12",
-    imagen: "../assets/img/tablet2.jpg",
+    imagen: pagesImg + "img/tablet2.jpg",
     precio: 1459.99,
     id: "co09",
   },
   {
     marca: "Apple",
     modelo: "iPhone 12",
-    imagen: "../assets/img/tablet3.jfif",
+    imagen: pagesImg + "img/tablet3.jfif",
     precio: 1459.99,
     id: "co10",
   },
@@ -322,29 +338,27 @@ const tablets = [
 
 // ! buscamos el id donde pondremos los productos:
 
-var section = document.getElementsByTagName("section")[1];
 
-// Obtener el valor del ID
-var contenedorProductos = section.id;
-
-// creacion de array de los productos a mostrar
-var arrayproductos = [];
 
 // ! seleccionamos el producto segun el id del contenedor, permite uso de multiples paginas. 100%
 switch (contenedorProductos) {
 
   case "tablets":
     arrayproductos = tablets;
-    
-    break;
-    case "laptops":
-      arrayproductos = laptops;
-  
-    break;
-    case "computadoras":
-      arrayproductos = computadoras;
 
     break;
+  case "laptops":
+    arrayproductos = laptops;
+
+    break;
+  case "computadoras":
+    arrayproductos = computadoras;
+
+    break;
+  case "indice":
+    console.log('indice');
+    pagesImg = "./src/assets/";
+    console.log(pagesImg);
   default:
     arrayproductos = celulares;
 
@@ -367,15 +381,15 @@ function mostrarProducto(identifier, arrayproductos) {
             <button onclick="agregarAlCarrito('${celular.imagen}','${celular.marca}', '${celular.modelo}', ${celular.precio})">Agregar al carrito</button>
           </div>
         `;
-        //--colocara los productos mediante innerHTML
-        contenido.innerHTML += diseñoProducto;
+    //--colocara los productos mediante innerHTML
+    contenido.innerHTML += diseñoProducto;
 
   });
 }
 
 
 // !ejecutamos la funcion que colocara los productos mediante innerHTML
-mostrarProducto(contenedorProductos,arrayproductos);
+mostrarProducto(contenedorProductos, arrayproductos);
 
 
 

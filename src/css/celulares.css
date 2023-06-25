@@ -2,13 +2,18 @@ main {
   padding: 10px 0;
   display: flex;
 }
+
 h2 {
   margin-top: 40px;
   text-align: center;
   font-size: 30px;
 }
 
-#celulares,#tablets,#computadoras,#laptops {
+#celulares,
+#tablets,
+#computadoras,
+#laptops,
+#indice {
   width: 85%;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -73,6 +78,7 @@ h2 {
   height: 180px;
   object-fit: cover;
 }
+
 .tablet h3,
 .computadora h3,
 .celular h3,
