@@ -1,90 +1,114 @@
-@root {
-  --banner-color: #045baa;
-}
-
 #carrito {
-  position: fixed;
-  flex-direction: column;
-  display: flex;
-  width: 300px;
+  width: 22vw;
   height: 100vh;
-  border: 1px solid rgba(128, 128, 128, 0.598);
-  background: #fdfdfd;
-  padding: 10px;
-  overflow: hidden;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
   float: right;
   top: 0;
   right: 0;
+  padding: 0 5px;
+  color: #393e59;
+  border-top-left-radius: 5px;
+  border-left: 1px solid #1c7bd443;
 }
 
-#carrito .titulo {
-  height: 7%;
-  width: 100%;
-  font-size: 32px;
+.titulo {
+  height: 10%;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  color: #393e59;
+  font-size: 32px;
+
+
 }
-.titulo a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+
 .titulo h3 {
   flex: 1;
-  display: flex;
-  justify-content: center;
+  text-align: center;
 }
+
+.titulo a {
+  text-align: center;
+  margin: 10px;
+}
+
 #contenedor {
-  width: 100%;
-  height: 65%;
-  overflow: auto;
-  display: flex;
-  flex-direction: column;
-  border-radius: 18px;
-  padding: 10px 8px;
-  border: 1px solid #6fbfbf5b;
-  background: linear-gradient(145deg, #f3f0f0ef, #f0f0f083);
+  height: 60%;
+  padding: 5px;
+  border: 1px solid #393e5989;
+  border-radius: 10px;
+  margin: 1px;
 }
 
-#carrito .billing {
-  width: 100%;
+.billing {
   height: 30%;
-  font-size: 22px;
-  padding: 10px;
-  display: flex;
-  border-bottom: 25px;
-  flex-direction: column;
-  margin-top: 10px;
-  /* box-shadow: 0px -3px 0px 1px rgba(116, 162, 214, 0.75);
-    -webkit-box-shadow: 0px -3px 0px 1px rgba(116, 162, 214, 0.75);
-    -moz-box-shadow: 0px -3px 0px 1px rgba(116, 162, 214, 0.75); */
+  padding: 5px;
 }
 
-.billing .subtotal,
-.billing .sending,
-.billing .total {
+.subtotal,
+.sending,
+.total {
   display: flex;
-  justify-content: space-between;
-  height: 40px;
-  color: #393e59;
+  height: 25%;
+  align-items: center;
 }
 
-.billing .total {
+.subtotal {
+  background: rgb(28, 123, 212);
+
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  color: white;
+}
+
+.total {
+  border: 2px solid rgb(216, 214, 214);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.sending {
+  border-left: 1px solid rgb(216, 214, 214);
+  border-right: 1px solid rgb(216, 214, 214);
+}
+
+.subtotal p:nth-child(1),
+.sending p:nth-child(1),
+.total p:nth-child(1) {
+  padding-left: 10px;
+}
+
+
+.subtotal p:nth-child(2),
+.sending p:nth-child(2),
+.total p:nth-child(2) {
+  flex: 1;
+  text-align: right;
+  padding-right: 10px;
+}
+
+.subtotal p:nth-child(3),
+.sending p:nth-child(3),
+.total p:nth-child(3) {
+  padding-right: 10px;
+}
+
+.total p:nth-child(2) {
   font-weight: bold;
 }
 
-.billing hr {
-  border: none;
-  height: 1px;
-  background: rgba(141, 137, 137);
+.pay {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.billing button {
-  height: 50px;
-  width: 100%;
-  border-radius: 25px;
+.pay button {
+  width: 70%;
+  border-radius: 15px;
   color: white;
   margin: 5px 0;
   font-size: 22px;
@@ -92,36 +116,37 @@
   border: 1px solid transparent;
 }
 
-.producto {
-  width: 100%;
-  height: 60px;
-  background: white;
-  border: 1px solid #393e5989;
+.pay button:hover {
+  background: #0079c1;
+
+}
+
+#icnCar {
+  position: relative;
+}
+
+#icnCar_itm {
+  padding: 1px;
+  position: absolute;
+  text-align: center;
+  font-weight: bold;
+  background: whitesmoke;
+  color: #1c7bd4;
+  height: 20px;
+  width: 20px;
+  top: -10px;
+  right: -14px;
   border-radius: 10px;
-  margin-top: 5px;
+  opacity: 0.7;
+}
+
+.producto {
   display: flex;
+  background: whitesmoke;
   align-items: center;
-  padding: 0 10px;
-}
-
-#contenedor::-webkit-scrollbar {
-  width: 7px;
-}
-
-#contenedor::-webkit-scrollbar-thumb {
-  background-color: #393e59;
+  padding: 5px;
+  margin: 5px 0;
   border-radius: 5px;
-}
-
-#contenedor::-webkit-scrollbar-track {
-  background-color: #f0f2f2;
-  /* color de fondo de la barra de desplazamiento */
-  border-radius: 5px;
-}
-
-#contenedor::-webkit-scrollbar-thumb:hover {
-  background-color: #555;
-  /* color de la barra de desplazamiento al pasar el mouse por encima */
 }
 
 .producto img {
@@ -139,28 +164,6 @@
   justify-content: space-around;
 }
 
-.oculto {
-  transform: translateX(100%);
-}
-
-#icnCar {
-  position: relative;
-}
-#icnCar_itm {
-  padding: 1px;
-  position: absolute;
-  text-align: center;
-  font-weight: bold;
-  background: whitesmoke;
-  color: #1c7bd4;
-  height: 20px;
-  width: 20px;
-  top: -10px;
-  right: -14px;
-  border-radius: 10px;
-  opacity: 0.7;
-}
-
 #alertaProducto {
   background: white;
   border-radius: 5px;
@@ -176,11 +179,14 @@
   font-size: 14px;
 }
 
-.removeProd {
-  cursor: pointer;
-  height: 100%;
-  width: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.removeProd p {
+  width: 15px;
+}
+
+.descripcion h4 {
+  padding-bottom: 5px;
+}
+
+.descripcion p {
+  font-size: 14px;
 }

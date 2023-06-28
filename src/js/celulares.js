@@ -340,7 +340,7 @@ const tablets = [
 
 
 
-// ! seleccionamos el producto segun el id del contenedor, permite uso de multiples paginas. 100%
+// ! seleccionamos categoria segun el id del contenedor, permite uso de multiples paginas. 100%
 switch (contenedorProductos) {
 
   case "tablets":
@@ -355,10 +355,7 @@ switch (contenedorProductos) {
     arrayproductos = computadoras;
 
     break;
-  case "indice":
-    console.log('indice');
-    pagesImg = "./src/assets/";
-    console.log(pagesImg);
+
   default:
     arrayproductos = celulares;
 
@@ -367,7 +364,7 @@ switch (contenedorProductos) {
 }
 
 
-//  -- function simpleficada: se usan parametros identifier(identificador de un div), arrayproductos(se da un array de productos para ser mostrad)
+//  -- function simpleficada: se usan parametros 'identifier'(identificador de un div), arrayproductos(se da un array de productos para ser mostrad)
 function mostrarProducto(identifier, arrayproductos) {
   const contenido = document.getElementById(identifier)
   contenido.innerHTML = "";
@@ -405,105 +402,106 @@ mostrarProducto(contenedorProductos, arrayproductos);
 
 
 // ! variables del carrito
-const prodSelecItm = document.getElementById("icnCar_itm");
-const carritoContn = document.getElementById("contenedor");
-const subTotal = document.getElementById("subTotalprecio");
+// const prodSelecItm = document.getElementById("icnCar_itm");
+// const carritoContn = document.getElementById("contenedor");
+// const subTotal = document.getElementById("subTotalprecio");
 
-const carrito = [];
-var cantProdAdd;
-var precioTotal = 0;
-
-
+const prodCarrito = [];
+// var cantProdAdd;
+// var precioTotal = 0;
 
 
-// todo: Función para agregar un celular al carrito (ejemplo de implementación)
-function agregarAlCarrito(ruta, marca, modelo, precio) {
+
+
+// todo: Función para agregar un producto al carrito (ejemplo de implementación)
+// function agregarAlCarrito(ruta, marca, modelo, precio) {
   // -- añadir diseño de producto seleccionado a carrito
-  const prodSelect = {
-    id: "CE" + setIdUnico(),
-    marca: marca,
-    modelo: modelo,
-    imagen: ruta,
-    precio: precio,
-  };
+  // const prodSelect = {
+  //   id: "CE" + setIdUnico(),
+  //   marca: marca,
+  //   modelo: modelo,
+  //   imagen: ruta,
+  //   precio: precio,
+  // };
 
-  const addproductHTML = `
-          <div class="producto" id="${prodSelect.id}">
-          <div class="imagenprod">
-            <img src="${ruta}" alt="${marca} ${modelo}">
-          </div>
-          <div class="descripcion">
-            <h4>${marca} ${modelo}</h4>
-            <p>${precio} $</p>
-          </div>
-          <div class="removeProd" onclick="eliminarDelCarrito('${prodSelect.id}', ${prodSelect.precio})">
-            <p>x</p>
-          </div>
-        </div>`;
+  // const addproductHTML = `
+  //         <div class="producto" id="${id}">
+  //         <div class="imagenprod">
+  //           <img src="${ruta}" alt="${marca} ${modelo}">
+  //         </div>
+  //         <div class="descripcion">
+  //           <h4>${marca} ${modelo}</h4>
+  //           <p>${precio} $</p>
+  //         </div>
+  //         <div class="removeProd" onclick="eliminarDelCarrito('${id}', ${precio})">
+  //           <p>x</p>
+  //         </div>
+  //       </div>`;
 
-  carrito.push(prodSelect);
-  precioTotal += precio;
+
+  // carrito.push(prodSelect);
+  // console.log(carrito)
+  // precioTotal += precio;
 
   // -- se añade un nuevo elemento al carrito
-  carritoContn.innerHTML += addproductHTML;
+  // carritoContn.innerHTML += addproductHTML;
+  // prodCarrito += addproductHTML;
 
-  setCantProdsSelec();
-  verificarCarritoVacio(carrito.length);
-  setSubTotal(precioTotal);
-}
 
-function verificarCarritoVacio(cantprod) {
-  const carritoVacio = `
-    <div id="alertaProducto">
-    <p>No has Añadido productos.</p>
-    </div>
-    `;
+  // setCantProdsSelec();
+  // verificarCarritoVacio(carrito.length);
+  // setSubTotal(precioTotal);
+// }
 
-  if (cantprod == 0) {
-    carritoContn.innerHTML += carritoVacio;
-  } else if (cantprod == 1) {
-    removeElements("alertaProducto");
-  } else {
-    //fin
-  }
-}
+// function verificarCarritoVacio(cantprod) {
+//   const carritoVacio = `
+//     <div id="alertaProducto">
+//     <p>No has Añadido productos.</p>
+//     </div>
+//     `;
 
-function removeElements(identifier) {
-  var remover = document.getElementById(identifier);
-  carritoContn.removeChild(remover);
-}
+//   if (cantprod == 0) {
+//     carritoContn.innerHTML += carritoVacio;
+//   } else if (cantprod == 1) {
+//     removeElements("alertaProducto");
+//   } else {
+//     //fin
+//   }
+// }
 
-function setIdUnico() {
-  return cantProdAdd++;
-}
+// function removeElements(identifier) {
+//   var remover = document.getElementById(identifier);
+//   carritoContn.removeChild(remover);
+// }
 
-function setCantProdsSelec() {
-  var numero = parseInt(prodSelecItm.innerText);
-  numero++;
-  prodSelecItm.innerText = numero.toString();
-}
 
-function setSubTotal(total) {
-  var numero = parseInt(subTotal.innerText);
-  numero = total;
-  subTotal.innerText = numero.toFixed(2) + " $";
-}
+// function setCantProdsSelec() {
+//   var numero = parseInt(prodSelecItm.innerText);
+//   numero++;
+//   prodSelecItm.innerText = numero.toString();
+// }
 
-function eliminarDelCarrito(id, precio) {
-  const indice = carrito.findIndex((producto) => producto.id === id);
+// function setSubTotal(total) {
+//   var numero = parseInt(subTotal.innerText);
+//   numero = total;
+//   subTotal.innerText = numero.toFixed(2) + " $";
+// }
 
-  if (indice !== -1) {
-    carrito.splice(indice, 1);
-    precioTotal -= precio;
+// function eliminarDelCarrito(id, precio) {
+//   const indice = carrito.findIndex((producto) => producto.id === id);
 
-    // Actualizar la visualización del carrito y el precio total
-    console.log("recibi la señal");
+//   if (indice !== -1) {
+//     carrito.splice(indice, 1);
+//     precioTotal -= precio;
 
-    subTotal.innerText = precioTotal.toFixed(2) + " $";
-    // setSubTotal(precioTotal);
-    // setCantProdsSelec();
-    verificarCarritoVacio(carrito.length);
-  }
-}
+//     // Actualizar la visualización del carrito y el precio total
+//     console.log("recibi la señal");
+
+//     subTotal.innerText = precioTotal.toFixed(2) + " $";
+//     // setSubTotal(precioTotal);
+//     // setCantProdsSelec();
+//     verificarCarritoVacio(carrito.length);
+//   }
+// }
 
 //code
