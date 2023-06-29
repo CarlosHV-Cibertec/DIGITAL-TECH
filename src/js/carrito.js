@@ -55,7 +55,7 @@ function agregarAlCarrito(ruta, marca, modelo, precio) {
   verificarCarritoVacio(carrito.length);
   setSubTotal(precioTotal);
   calcularDescuento(carrito.length);
-
+  qrbox.style.display = 'none';
 }
 
 function verificarCarritoVacio(cantprod) {
