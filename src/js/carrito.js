@@ -3,11 +3,22 @@
 const prodSelecItm = document.getElementById("icnCar_itm");
 const carritoContn = document.getElementById("contenedor");
 const subTotal = document.getElementById("subTotalprecio");
+const pay = document.getElementById("pay");
+const totalpagar = document.getElementById('totalpagar');
+const resumen = document.getElementById('resumen');
+
+
+const iconopago = document.getElementById('iconopago');
+const descuento = document.getElementById("descuento");
+var descuentofinal;
+var Entrega = 0;
 
 const carrito = [];
 var cantProdAdd;
 var precioTotal = 0;
-
+var totpagar = 0;
+var descuentoTotal = 0
+var resumenProductos;
 verificarCarritoVacio(carrito.length);
 
 // todo: Función para agregar un celular al carrito (ejemplo de implementación)
@@ -44,6 +55,8 @@ function agregarAlCarrito(ruta, marca, modelo, precio) {
   setCantProdsSelec();
   verificarCarritoVacio(carrito.length);
   setSubTotal(precioTotal);
+  calcularDescuento(carrito.length);
+
 }
 
 function verificarCarritoVacio(cantprod) {
@@ -53,34 +66,40 @@ function verificarCarritoVacio(cantprod) {
     </div>
     `;
 
-  if (cantprod == 0) {
-    carritoContn.innerHTML += carritoVacio;
-  } else if (cantprod == 1) {
-    removeElements("alertaProducto");
+  const alertaProducto = document.getElementById("alertaProducto");
+  if (cantprod < 1) {
+    if (!alertaProducto) {
+      carritoContn.innerHTML += carritoVacio;
+    }
   } else {
-    //fin
+    if (alertaProducto) {
+      carritoContn.removeChild(alertaProducto);
+    }
   }
 }
 
+
+function removeAlerta(identifier) {
+  var remover = document.getElementById(identifier);
+  carritoContn.removeChild(remover);
+}
 function removeElements(identifier) {
   var remover = document.getElementById(identifier);
   carritoContn.removeChild(remover);
 }
 
 function setIdUnico() {
-  return cantProdAdd++;
+  return carrito.length + 1;
 }
 
 function setCantProdsSelec() {
-  var numero = parseInt(prodSelecItm.innerText);
-  numero++;
-  prodSelecItm.innerText = numero.toString();
+  prodSelecItm.innerText = carrito.length;
 }
 
 function setSubTotal(total) {
   var numero = parseInt(subTotal.innerText);
   numero = total;
-  subTotal.innerText = numero.toFixed(2) + " $";
+  subTotal.innerText = numero.toFixed(2);
 }
 
 function eliminarDelCarrito(id, precio) {
@@ -89,15 +108,58 @@ function eliminarDelCarrito(id, precio) {
   if (indice !== -1) {
     carrito.splice(indice, 1);
     precioTotal -= precio;
-
     // Actualizar la visualización del carrito y el precio total
-    console.log("recibi la señal");
-
-    subTotal.innerText = precioTotal.toFixed(2) + " $";
-    // setSubTotal(precioTotal);
-    // setCantProdsSelec();
+    subTotal.innerText = precioTotal.toFixed(2);
+    removeElements(id);
+    setSubTotal(precioTotal);
+    calcularDescuento(carrito.length);
+    setCantProdsSelec();
     verificarCarritoVacio(carrito.length);
+
   }
 }
 
+
+
+
+
+function calcularDescuento(cantida) {
+  const descuentoPorItem = 10;
+  descuentoTotal = descuentoPorItem * cantida;
+
+  preciopagar(descuentoTotal);
+  descuento.innerText = descuentoTotal.toFixed(2);
+
+}
+
+
 //code
+
+function preciopagar(desc) {
+
+  totpagar = precioTotal - desc;
+
+  totalpagar.innerText = totpagar.toFixed(2);
+}
+
+
+
+
+
+
+
+
+
+
+function pagar() {
+  var productos = carrito.map(producto => `${producto.marca} ${producto.modelo}`);
+  resumenProductos = productos.join(', ');
+
+  if (carrito.length == 0) {
+    resumenProductos = "agrega elementos a tu carrito :) \n";
+  }
+
+  new QRCode(iconopago, resumenProductos + " total a pagar: " + totpagar);
+
+
+}

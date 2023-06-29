@@ -12,6 +12,7 @@
   color: #393e59;
   border-top-left-radius: 5px;
   border-left: 1px solid #1c7bd443;
+
 }
 
 .titulo {
@@ -40,6 +41,7 @@
   border: 1px solid #393e5989;
   border-radius: 10px;
   margin: 1px;
+  overflow: auto;
 }
 
 .billing {
@@ -104,6 +106,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 
 .pay button {
@@ -189,4 +192,54 @@
 
 .descripcion p {
   font-size: 14px;
+}
+
+.mostrarqr {
+  position: absolute;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  right: 21.5vw;
+  bottom: 3px;
+  height: 400px;
+  width: 500px;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+.mostrarqr p {
+  height: 45px;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 5px;
+}
+
+#iconopago {
+  height: 200px;
+  width: 200px;
+  display: flex;
+  overflow: hidden;
+}
+
+#resumen {
+  height: auto;
+  background: red;
+  color: white;
+  width: 50%;
+  height: 100%;
+}
+
+.vistaproducto {
+  width: 100%;
+  background: orange;
+  display: flex;
+}
+
+.qrcontent {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: blue;
 }

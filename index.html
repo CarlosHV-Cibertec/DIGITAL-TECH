@@ -215,7 +215,6 @@
     </div>
   </footer>
 
-
   <!--  carrito de compras  -->
   <div id="carrito">
     <div class="titulo">
@@ -224,6 +223,7 @@
     </div>
     <div id="contenedor">
       <!-- -- aqui tenemos los productos -->
+
     </div>
 
     <div class="billing">
@@ -233,22 +233,37 @@
         <p>$</p>
       </div>
       <div class="sending">
-        <p>Entrega</p>
-        <p>00.00</p>
+        <p>Descuento</p>
+        <p id="descuento">0</p>
         <p>$</p>
       </div>
       <hr />
       <div class="total">
         <p>Total</p>
-        <p>4000</p>
+        <p id="totalpagar">0</p>
         <p>$</p>
       </div>
       <div class="pay">
-        <button>Pagar</button>
+        <button onclick="pagar();">Pagar</button>
+        <div class="mostrarqr">
+          <p>Resumen De compra</p>
+          <div class="vistaproducto">
+            <div id="resumen"></div>
+            <div id="iconopago">
+            </div>
+          </div>
+
+
+
+        </div>
       </div>
     </div>
   </div>
 
+  <!-- --enlaces javascript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"
+    integrity="sha512-CNgIRecGo7nphbeZ04Sc13ka07paqdeTu0WR1IM4kNcpmBAUSHSQX0FslNhTDadL4O5SAGapGt4FodqL8My0mA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script type="text/javascript" src="./src/js/celulares.js"></script>
   <script type="text/javascript" src="./src/js/script.js"></script>
   <script type="text/javascript" src="./src/js/cerrarDivId.js"></script>
