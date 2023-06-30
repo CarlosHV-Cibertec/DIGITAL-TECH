@@ -46,70 +46,70 @@ const celulares = [
     marca: "Apple",
     modelo: "iPhone 12",
     imagen: pagesImg + "img/celular1.jfif",
-    precio: 1459.99,
+    precio: 2500,
     id: "ce01",
   },
   {
     marca: "Samsung",
     modelo: "Galaxy S21",
     imagen: pagesImg + "img/celular2.jfif",
-    precio: 999.99,
+    precio: 1500,
     id: "ce02",
   },
   {
-    marca: "Apple",
-    modelo: "iPhone 12",
+    marca: "Xiaomi",
+    modelo: "RedMi Note 10",
     imagen: pagesImg + "img/celular3.jfif",
-    precio: 1459.99,
+    precio: 1000,
     id: "ce03",
   },
   {
-    marca: "Apple",
-    modelo: "iPhone 12",
+    marca: "LG",
+    modelo: "G8s ThinQ",
     imagen: pagesImg + "img/celular4.jfif",
-    precio: 1459.99,
+    precio: 1000,
     id: "ce04",
   },
   {
     marca: "Samsung",
-    modelo: "Galaxy S21",
+    modelo: "Galaxy S20",
     imagen: pagesImg + "img/celular5.jfif",
-    precio: 999.99,
+    precio: 2000,
     id: "ce05",
   },
   {
     marca: "Apple",
-    modelo: "iPhone 12",
+    modelo: "iPhone 14",
     imagen: pagesImg + "img/celular6.jfif",
-    precio: 1459.99,
+    precio: 3500,
     id: "ce06",
   },
   {
-    marca: "Apple",
-    modelo: "iPhone 12",
+    marca: "Samsung",
+    modelo: "Galaxy S23 Ultra",
     imagen: pagesImg + "img/celular7.jfif",
-    precio: 1459.99,
+    precio: 5000,
     id: "ce07",
   },
   {
-    marca: "Apple",
-    modelo: "iPhone 12",
+    marca: "Motorola",
+    modelo: "MotoG 13",
     imagen: pagesImg + "img/celular8.jfif",
-    precio: 1459.99,
+    precio: 500,
     id: "ce08",
   },
   {
-    marca: "Apple",
-    modelo: "iPhone 12",
+    marca: "LG",
+    modelo: "V50s Thing",
     imagen: pagesImg + "img/celular9.jfif",
-    precio: 1459.99,
+    precio: 1500,
     id: "ce09",
   },
   {
-    marca: "Apple",
-    modelo: "iPhone 12",
+    marca: "Samsung",
+    modelo: "S23 Pro Gray",
     imagen: pagesImg + "img/celular10.jfif",
-    precio: 1459.99,
+    precio: 3500,
     id: "ce10",
   },
 ];
@@ -372,10 +372,11 @@ function mostrarProducto(identifier, arrayproductos) {
   arrayproductos.forEach((celular) => {
     const diseñoProducto = `
           <div class="celular">
+            <h3>${celular.marca}</h3>
+            <h3 class="modelo">${celular.modelo}</h3>
             <img src="${celular.imagen}" alt="${celular.marca} ${celular.modelo}">
-            <h3>${celular.marca} ${celular.modelo}</h3>
             <p>Precio: $${celular.precio}</p>
-            <button onclick="agregarAlCarrito('${celular.imagen}','${celular.marca}', '${celular.modelo}', ${celular.precio})">Agregar al carrito </button>
+            <button onclick="agregarAlCarrito('${celular.imagen}','${celular.marca}', '${celular.modelo}', ${celular.precio})">Lo quiero</button>
           </div>
         `;
     //--colocara los productos mediante innerHTML
