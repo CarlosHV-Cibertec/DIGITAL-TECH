@@ -157,7 +157,11 @@
   <h2>TABLET:</h2>
   <main>
     <section id="filtros">
-      <h3>Marca:</h3>
+      <div class="cabecera">
+        <img id="bar" src="../assets/img/bars-solid.svg" alt="icono de bar">
+        <h3 id="titulo_filtro">FILTROS</h3>
+      </div>
+      <h3 class="subtitulo">Marca :</h3>
       <ul id="marca-filtros">
         <li>
           <input type="checkbox" id="marca-samsung" value="Samsung">
@@ -181,8 +185,10 @@
         </li>
       </ul>
 
-      <h3>Precio:</h3>
-      <input type="range" id="precio-filtro" min="0" max="2000" step="100" value="2000">
+      <h3 class="subtitulo">Precio :</h3>
+      <p id="precio-texto">Selecciona una rango de precio para filtrar tu búsqueda.</p>
+      <input type="range" id="precio-filtro" min="0" max="5000" step="1000" value="0">
+      <div id="priceLabel">$</div>
       <p id="precio-valor"></p>
 
       <button id="aplicar-filtros-btn">Aplicar filtros</button>

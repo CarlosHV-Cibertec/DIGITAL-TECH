@@ -391,6 +391,38 @@ mostrarProducto(contenedorProductos, arrayproductos);
 
 
 
+//script para cambiar colores de acuerdo al rango de precio que el cliente selecciona desde js
+
+let precioDeRango = document.getElementById('precio-filtro');
+
+precioDeRango.addEventListener('input', function() {
+  let value = parseInt(precioDeRango.value);
+  let color = '';
+
+  if (value <= 1000) {
+    color = '#bc8f8f';
+  } else if (value <= 2000) {
+    color = '#8FBC8F';
+  } else if (value <= 3000) {
+    color = '#6a5acd';
+  } else if (value <= 4000) {
+    color = '#ffff00';
+  } else {
+    color = '#FF7F50';
+  }
+
+  precioDeRango.style.background = 'linear-gradient(to right, ' + color + ', ' + color + ')';
+});
+
+//Evento para que aparezca un valor de precio a medida que se manipula el range
+
+let precioRango = document.getElementById('precio-filtro');
+let priceLabel = document.getElementById('priceLabel');
+
+precioRango.addEventListener('input', function() {
+  let value = parseInt(precioRango.value);
+  priceLabel.innerHTML = '$' + value;
+});
 
 
 
