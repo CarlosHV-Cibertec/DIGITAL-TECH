@@ -68,6 +68,7 @@ h2 {
 #precio-texto{
   color: rgb(68, 64, 64);
   font-size: 15px;
+  margin: 5px 0;
 }
 
 #precio-valor {
