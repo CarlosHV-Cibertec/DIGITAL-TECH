@@ -263,11 +263,15 @@
       </div>
       <div class="pay">
         <button onclick="pagar();">Pagar</button>
-        <div class="mostrarqr">
-          <p>Resumen De compra</p>
+        <div class="mostrarqr " id="qrbox">
+          <div class="titulosqr">
+            <p>Resumen De compra</p>
+            <p onclick="toggleDiv('qrbox');">x</p>
+          </div>
           <div class="vistaproducto">
-            <div id="resumen"></div>
+            <!-- <div id="resumen"></div> -->
             <div class="qrcontent">
+              <p>Pagar es facil:</p>
               <div id="iconopago">
               </div>
             </div>

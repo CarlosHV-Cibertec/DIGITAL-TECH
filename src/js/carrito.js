@@ -7,12 +7,11 @@ const pay = document.getElementById("pay");
 const totalpagar = document.getElementById('totalpagar');
 const resumen = document.getElementById('resumen');
 
-
 const iconopago = document.getElementById('iconopago');
 const descuento = document.getElementById("descuento");
 var descuentofinal;
 var Entrega = 0;
-
+var resumenProduc;
 const carrito = [];
 var cantProdAdd;
 var precioTotal = 0;
@@ -56,7 +55,7 @@ function agregarAlCarrito(ruta, marca, modelo, precio) {
   verificarCarritoVacio(carrito.length);
   setSubTotal(precioTotal);
   calcularDescuento(carrito.length);
-
+  qrbox.style.display = 'none';
 }
 
 function verificarCarritoVacio(cantprod) {
@@ -147,19 +146,28 @@ function preciopagar(desc) {
 
 
 
+function mostrarResumen() {
+  const productos = carrito.map(producto => `${producto.marca} ${producto.modelo}`);
+  resumenProduc = productos.join('\n');
 
+  resumen.innerText = resumenProduc;
+}
 
 
 
 function pagar() {
-  var productos = carrito.map(producto => `${producto.marca} ${producto.modelo}`);
-  resumenProductos = productos.join(', ');
+  iconopago.innerHTML = '';
+  const productos = carrito.map(producto => `${producto.marca} ${producto.modelo}`);
+  resumenProductos = productos.join('\n ');
+  new QRCode(iconopago, resumenProductos + " \n  total a pagar: " + totpagar.toFixed(2));
+  // mostrarResumen();
+  qrbox.style.display = 'flex';
 
-  if (carrito.length == 0) {
-    resumenProductos = "agrega elementos a tu carrito :) \n";
-  }
 
-  new QRCode(iconopago, resumenProductos + " total a pagar: " + totpagar);
+  // if (carrito.length == 0) {
+  //   resumenProductos = "agrega elementos a tu carrito :) \n";
+  // }
+
 
 
 }

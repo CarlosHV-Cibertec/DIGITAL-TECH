@@ -7,11 +7,14 @@ setlogin.style.display = 'none';
 var setcarrito = document.getElementById('carrito');
 setcarrito.style.display = 'none';
 
+var qrbox = document.getElementById('qrbox');
+qrbox.style.display = 'none';
+
 
 // todo : oculta o abre un elemento en el dom
 function toggleDiv(divId) {
   var div = document.getElementById(divId);
-console.log(div)
+  console.log(div)
 
   // !comprueba si el div esta en pantalla, sino lo abre o lo cierra.
   if (div.style.display === "none") {

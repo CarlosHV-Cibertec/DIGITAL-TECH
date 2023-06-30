@@ -201,10 +201,11 @@
   flex-direction: column;
   right: 21.5vw;
   bottom: 3px;
-  height: 400px;
-  width: 500px;
-  padding: 5px;
-  border-radius: 10px;
+  height: 320px;
+  width: 290px;
+
+  border-radius: 11px;
+  border: 2px solid rgb(28, 123, 212);
 }
 
 .mostrarqr p {
@@ -216,30 +217,63 @@
 
 #iconopago {
   height: 200px;
-  width: 200px;
+  width: 100%;
   display: flex;
   overflow: hidden;
 }
 
 #resumen {
   height: auto;
-  background: red;
-  color: white;
+  color: rgb(139, 127, 229);
   width: 50%;
   height: 100%;
+  padding: 5px;
+  font-size: 14px;
+  border: 1px solid #0079c1;
+  border-radius: 10px;
+  /* border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-right: none; */
 }
 
 .vistaproducto {
   width: 100%;
-  background: orange;
   display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
 .qrcontent {
-  width: 50%;
+
   height: 100%;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  background: blue;
+  color: rgb(28, 123, 212);
+  /* border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-left: none; */
+  padding: 5px;
 }
+
+.titulosqr {
+  background: #045baa;
+  color: white;
+  display: flex;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  margin-bottom: 5px;
+
+}
+
+.titulosqr p:nth-child(1) {
+  flex: 1;
+}
+
+.titulosqr p:nth-child(2) {
+  width: 50px;
+  text-align: center;
+  cursor: pointer;
+}
+
+/* .qrcontent q {} */
