@@ -1,6 +1,6 @@
 main {
   padding: 10px 0;
-  padding-right: 10px ;
+  padding-right: 10px;
   display: flex;
 }
 
@@ -28,25 +28,46 @@ h2 {
   height: 600px;
   border: 2px solid black;
 }
+.cabecera{
+  display: flex;
+  height: 45px;
+}
+#bar{
+  width: 25px;
+}
+#titulo_filtro{
+  margin-top: 5px;
+  margin-left: 10px;
+  font-size: 33px;
+}
 
-#filtros h3 {
+.subtitulo {
   margin-top: 10px;
-  font-size: 25px;
+  font-size: 26px;
 }
 
 #marca-filtros {
   list-style: none;
   padding: 0;
-  margin: 0;
+  margin: 15px 0;
 }
 
 #marca-filtros li {
-  margin-bottom: 5px;
+  margin: 10px 0;
+}
+
+#marca-filtros label{
+  margin-left: 10px;
+  color: rgb(68, 64, 64);
 }
 
 #precio-filtro {
   width: 70%;
-  margin: 0 50px;
+  margin: 10px 20px;
+}
+#precio-texto{
+  color: rgb(68, 64, 64);
+  font-size: 15px;
 }
 
 #precio-valor {
@@ -56,9 +77,47 @@ h2 {
 
 #aplicar-filtros-btn {
   display: block;
-  margin: 10px auto;
+  margin: 15px auto;
+}
+input[type="range"] {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 10px;
+  border-radius: 5px;
+  background: linear-gradient(to right, #B0C4DE, #B0C4DE);
+  outline: none;
+  opacity: 0.7;
+  transition: opacity 0.2s;
 }
 
+input[type="range"]::-webkit-slider-thumb {
+  
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #fff;
+  border: 2px solid black;
+  cursor: pointer;
+}
+
+input[type="range"]::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #B0C4DE;
+  cursor: pointer;
+}
+
+input[type="range"]:focus {
+  opacity: 1;
+}
+
+#priceLabel {
+  text-align: center;
+  margin: 5px 0;
+  font-size: 16px;
+}
 .tablet,
 .computadora,
 .celular,
