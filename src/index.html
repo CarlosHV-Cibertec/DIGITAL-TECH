@@ -1,163 +1,232 @@
 <!DOCTYPE html>
 <html lang="es-PE">
-  <head>
-    <title>Digital TECH | Tecnología a tu alcance</title>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="title" content="Digital TECH | Tecnología a tu alcance">
-    <meta name="description">
-    <link rel="canonical" href="">
-    <link href="https://fonts.googleapis.com/css?family=Barlow:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
-    <link rel="stylesheet" href="./css/scrollbarCSS.css">
-    <link rel="stylesheet" href="./css/registro.css">
-    <!-- <link rel="stylesheet" href="./css/header.css" /> -->
-    <link rel="stylesheet" href="./css/celulares.css" />
-    <link rel="stylesheet" href="./css/carrito.css" />
-    <link rel="stylesheet" href="./css/login.css" />
-    <link href="./css/index.css" rel="stylesheet"></head>
-  <body>
-    <div class="remanso-fixed">
-      <section class="digital-tech-info">
-        <div class="digital-tech-info__contact container">
-          <div class="digital-tech-info__contact__logo">
-            <picture><img src="./assets/img/index/logo-digital-tech.png" srcset="./assets/img/index/logo-digital-tech.png, ./assets/img/index/logo-digital-tech@2x.png 2x" alt="Logo Remanso" title="Logo Remanso"></picture>
+
+<head>
+  <title>Digital TECH | Tecnología a tu alcance</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="title" content="Digital TECH | Tecnología a tu alcance">
+  <meta name="description">
+  <link rel="canonical" href="">
+  <link
+    href="https://fonts.googleapis.com/css?family=Barlow:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./css/scrollbarCSS.css">
+  <link rel="stylesheet" href="./css/registro.css">
+  <link rel="stylesheet" href="./css/footer.css">
+
+  <link rel="stylesheet" href="./css/header.css" />
+  <link rel="stylesheet" href="./css/celulares.css" />
+  <link rel="stylesheet" href="./css/carrito.css" />
+  <link rel="stylesheet" href="./css/login.css" />
+  <link href="./css/index.css" rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <div class="top-bar">
+      <div class="top-bar__content  container-responsive">
+        <div class="top-bar__logo">
+          <img src="./assets/img/DigitalT300.jpg" alt="" />
+          <p>Digital_Tech</p>
+        </div>
+        <div class="top-bar__input-search">
+          <!-- barra de busqueda -->
+          <input id="search" type="search" name="search" placeholder="Búsqueda" />
+        </div>
+        <div class="top-bar__login">
+          <!--  -- itm inicio de sesion y cuenta -->
+          <div class="top-bar__account" onclick="toggleDiv('cont_box_login')">
+            <img src="./assets/img/user.png" alt="Icono Usuario" />
+            <a href="#"> Mi cuenta</a>
           </div>
-          <div class="digital-tech-info__contact__details">
-            <div class="digital-tech-info__contact__myuser flex-item">
-              <div class="digital-tech-info__contact__img">
-                <picture><img src="./assets/img/index/icon-usuario.png" srcset="./assets/img/index/icon-usuario.png, ./assets/img/index/icon-usuario@2x.png 2x" alt="Icono Localización" title="Icono Localización"></picture>
-              </div>
-              <div class="digital-tech-info__contact__text" onclick="toggleDiv('cont_box_login')">
-                <p>MI CUENTA</p>
-              </div>
+          <!-- -- carrito de compras -->
+          <div id="open_car" class="top-bar__car" onclick="toggleDiv('carrito')">
+            <div id="icnCar">
+              <img src="./assets/img/shopping-cart.png" alt="Icono Carrito de compras" />
+              <span id="icnCar_itm">0</span>
             </div>
-            <div class="digital-tech-info__contact__buycar flex-item top-bar__car" id="open_car" onclick="toggleDiv('carrito')">
-              <div class="digital-tech-info__contact__img">
-                <picture><img src="./assets/img/index/icon-buycar.png" srcset="./assets/img/index/icon-buycar.png, ./assets/img/index/icon-buycar@2x.png 2x" alt="Icono Whatsapp" title="Icono Whatsapp"></picture>
-              </div>
+            <div>
+              <a href="./pages/celulares.html">Comprar</a>
             </div>
           </div>
         </div>
-      </section>
-      <section class="digital-tech-nav">
-        <nav class="digital-tech-nav__pages container cf">
-          <ul>
-            <li><a href="./index.html">Inicio</a></li>
-            <li><a href="./pages/celulares.html">Celulares</a></li>
-            <li><a href="./pages/computadoras.html">Computadoras</a></li>
-            <li><a href="./pages/laptops.html">Laptops</a></li>
-            <li><a href="./pages/tablets.html">Tablets</a></li>
-          </ul>
-        </nav>
-      </section>
+        <!-- --fin de botones -->
+      </div>
     </div>
-    <section class="digital-tech-hero">
-      <div class="digital-tech-hero__img-slide">
-        <picture><img src="./assets/img/index/img-digital-tech-promotional.png" srcset="./assets/img/index/img-digital-tech-promotional.png, ./assets/img/index/img-digital-tech-promotional@2x.png 2x" alt="Imagen Hero 1" title="Imagen Hero 1"></picture>
-      </div>
-      <div class="digital-tech-hero__img-slide">
-        <picture><img src="./assets/img/index/img-digital-tech-promotional.png" srcset="./assets/img/index/img-digital-tech-promotional.png, ./assets/img/index/img-digital-tech-promotional@2x.png 2x" alt="Imagen Hero 2" title="Imagen Hero 2"></picture>
-      </div>
-      <div class="digital-tech-hero__img-slide">
-        <picture><img src="./assets/img/index/img-digital-tech-promotional.png" srcset="./assets/img/index/img-digital-tech-promotional.png, ./assets/img/index/img-digital-tech-promotional@2x.png 2x" alt="Imagen Hero 3" title="Imagen Hero 3"></picture>
-      </div>
-    </section>
-    <section class="digital-tech-cinto flex-item">
-      <div class="digital-tech-cinto__text">
-        <p>OFERTAS EXCLUSIVAS POR POCO TIEMPO</p>
-      </div>
-      <div class="digital-tech-cinto__contador flex-item">
-        <div class="digital-tech-cinto__hrs flex-item">
-          <p class="contador" id="days">12</p>
-          <p>Días</p>
+    <nav class="nav-bar">
+      <ul>
+        <li><a href="../index.html">Inicio</a></li>
+        <li><a href="./pages/celulares.html">Celulares</a></li>
+        <li><a href="./pages/computadoras.html">Computadoras</a></li>
+        <li><a href="./pages/laptops.html">Laptops</a></li>
+        <li><a href="./pages/tablets.html">Tablets</a></li>
+      </ul>
+    </nav>
+    <!-- <div class="banner"></div> -->
+  </header>
+
+  <!-- <div class="remanso-fixed">
+    <section class="digital-tech-info">
+      <div class="digital-tech-info__contact container">
+        <div class="digital-tech-info__contact__logo">
+          <picture><img src="./assets/img/index/logo-digital-tech.png"
+              srcset="./assets/img/index/logo-digital-tech.png, ./assets/img/index/logo-digital-tech@2x.png 2x"
+              alt="Logo Remanso" title="Logo Remanso"></picture>
         </div>
-        <div class="digital-tech-cinto__hrs flex-item">
-          <p class="contador" id="hrs">12</p>
-          <p>Hrs.</p>
-        </div>
-        <div class="digital-tech-cinto__min flex-item">
-          <p class="contador" id="min">35</p>
-          <p>Min.</p>
-        </div>
-        <div class="digital-tech-cinto__seg flex-item">
-          <p class="contador" id="seg">50</p>
-          <p>Seg.</p>
-        </div>
-      </div>
-    </section>
-    <section class="remanso-social"> 
-      <div class="remanso-social__container"> <a href="#" target="_blank">
-          <picture><img src="./assets/img/index/icono-whatsapp.png" srcset="./assets/img/index/icono-whatsapp.png, ./assets/img/index/icono-whatsapp@2x.png 2x" alt="Logo Remanso" title="Logo Remanso"></picture></a><a href="#" target="_blank">
-          <picture><img src="./assets/img/index/icono-instagram.png" srcset="./assets/img/index/icono-instagram.png, ./assets/img/index/icono-instagram@2x.png 2x" alt="Logo Remanso" title="Logo Remanso"></picture></a><a href="#" target="_blank">
-          <picture><img src="./assets/img/index/icono-facebook.png" srcset="./assets/img/index/icono-facebook.png, ./assets/img/index/icono-facebook@2x.png 2x" alt="Logo Remanso" title="Logo Remanso"></picture></a></div>
-    </section>
-    <section class="digital-tech-ofertas container flex-item">
-      <div class="digital-tech-ofertas__item">
-        <div class="ofertas-item__img">
-          <picture><img src="./assets/img/index/oferta-cel.png" srcset="./assets/img/index/oferta-cel.png, ./assets/img/index/oferta-cel@2x.png 2x" alt="Oferta Celular" title="Oferta Celular"></picture>
-        </div>
-        <div class="ofertas-item__text">
-          <p class="title">Oferta Exclusiva </p>
-          <p class="price">S/.800</p>
-          <p class="list-price">S/. 1200</p>
-        </div>
-        <div class="ofertas-item__buton"> <a href="./pages/celulares.html">Vamos! </a></div>
-      </div>
-      <div class="digital-tech-ofertas__item">
-        <div class="ofertas-item__img">
-          <picture><img src="./assets/img/index/oferta-cel.png" srcset="./assets/img/index/oferta-cel.png, ./assets/img/index/oferta-cel@2x.png 2x" alt="Oferta Celular" title="Oferta Celular"></picture>
-        </div>
-        <div class="ofertas-item__text">
-          <p class="title">Oferta Exclusiva </p>
-          <p class="price">S/.800</p>
-          <p class="list-price">S/. 1200</p>
-        </div>
-        <div class="ofertas-item__buton"> <a href="./pages/celulares.html">Vamos! </a></div>
-      </div>
-      <div class="digital-tech-ofertas__item">
-        <div class="ofertas-item__img">
-          <picture><img src="./assets/img/index/oferta-cel.png" srcset="./assets/img/index/oferta-cel.png, ./assets/img/index/oferta-cel@2x.png 2x" alt="Oferta Celular" title="Oferta Celular"></picture>
-        </div>
-        <div class="ofertas-item__text">
-          <p class="title">Oferta Exclusiva </p>
-          <p class="price">S/.800</p>
-          <p class="list-price">S/. 1200</p>
-        </div>
-        <div class="ofertas-item__buton"> <a href="./pages/celulares.html">Vamos! </a></div>
-      </div>
-    </section>
-    <footer class="digital-tech-footer">
-      <div class="digital-tech-footer__content container flex-item">
-        <div class="digital-tech-footer__content__section1">
-          <picture><img src="./assets/img/index/logo-big-digital.png" srcset="./assets/img/index/logo-big-digital.png, ./assets/img/index/logo-big-digital@2x.png 2x" alt="Logo Digital Tech" title="Logo Digital Tech"></picture>
-        </div>
-        <div class="digital-tech-footer__content__section2">
-          <div class="digital-tech-footer__servicio">
-            <div class="digital-tech-footer__servicio__title">
-              <p>Servicio al Cliente</p>
+        <div class="digital-tech-info__contact__details">
+          <div class="digital-tech-info__contact__myuser flex-item">
+            <div class="digital-tech-info__contact__img">
+              <picture><img src="./assets/img/index/icon-usuario.png"
+                  srcset="./assets/img/index/icon-usuario.png, ./assets/img/index/icon-usuario@2x.png 2x"
+                  alt="Icono Localización" title="Icono Localización"></picture>
             </div>
-            <div class="digital-tech-footer__servicio__text">
-              <p>Términos y condiciones</p>
-              <p>Politicas de privacidad</p>
+            <div class="digital-tech-info__contact__text" onclick="toggleDiv('cont_box_login')">
+              <p>MI CUENTA</p>
             </div>
           </div>
-          <div class="digital-tech-footer__atencion">
-            <div class="digital-tech-footer__atencion__title">
-              <p>Atención al Cliente</p>
+          <div class="digital-tech-info__contact__buycar flex-item top-bar__car" id="open_car"
+            onclick="toggleDiv('carrito')">
+            <div class="digital-tech-info__contact__img">
+              <picture><img src="./assets/img/index/icon-buycar.png"
+                  srcset="./assets/img/index/icon-buycar.png, ./assets/img/index/icon-buycar@2x.png 2x"
+                  alt="Icono Whatsapp" title="Icono Whatsapp"></picture>
             </div>
-            <div class="digital-tech-footer__atencion__text">
-              <p>+01 074 5254</p>
-              <p>Lun. - Sáb. de 9:00am - 6pm</p>
-            </div>
-          </div>
-          <div class="digital-tech-footer__tarjetas">
-            <picture><img src="./assets/img/index/tarjetas.png" srcset="./assets/img/index/tarjetas.png, ./assets/img/index/tarjetas@2x.png 2x" alt="Tarjetas Aceptadas" title="Tarjetas Aceptadas"></picture>
           </div>
         </div>
       </div>
-    </footer>
-    <!-- login -->
+    </section>
+    <section class="digital-tech-nav">
+      <nav class="digital-tech-nav__pages container cf">
+        <ul>
+          <li><a href="./index.html">Inicio</a></li>
+          <li><a href="./pages/celulares.html">Celulares</a></li>
+          <li><a href="./pages/computadoras.html">Computadoras</a></li>
+          <li><a href="./pages/laptops.html">Laptops</a></li>
+          <li><a href="./pages/tablets.html">Tablets</a></li>
+        </ul>
+      </nav>
+    </section>
+  </div> -->
+
+
+  <section class="digital-tech-hero">
+    <div class="digital-tech-hero__img-slide">
+      <picture><img src="./assets/img/index/img-digital-tech-promotional.png"
+          srcset="./assets/img/index/img-digital-tech-promotional.png, ./assets/img/index/img-digital-tech-promotional@2x.png 2x"
+          alt="Imagen Hero 1" title="Imagen Hero 1"></picture>
+    </div>
+    <div class="digital-tech-hero__img-slide">
+      <picture><img src="./assets/img/index/img-digital-tech-promotional.png"
+          srcset="./assets/img/index/img-digital-tech-promotional.png, ./assets/img/index/img-digital-tech-promotional@2x.png 2x"
+          alt="Imagen Hero 2" title="Imagen Hero 2"></picture>
+    </div>
+    <div class="digital-tech-hero__img-slide">
+      <picture><img src="./assets/img/index/img-digital-tech-promotional.png"
+          srcset="./assets/img/index/img-digital-tech-promotional.png, ./assets/img/index/img-digital-tech-promotional@2x.png 2x"
+          alt="Imagen Hero 3" title="Imagen Hero 3"></picture>
+    </div>
+  </section>
+  <section class="digital-tech-cinto flex-item">
+    <div class="digital-tech-cinto__text">
+      <p>OFERTAS EXCLUSIVAS POR POCO TIEMPO</p>
+    </div>
+    <div class="digital-tech-cinto__contador flex-item">
+      <div class="digital-tech-cinto__hrs flex-item">
+        <p class="contador" id="days">12</p>
+        <p>Días</p>
+      </div>
+      <div class="digital-tech-cinto__hrs flex-item">
+        <p class="contador" id="hrs">12</p>
+        <p>Hrs.</p>
+      </div>
+      <div class="digital-tech-cinto__min flex-item">
+        <p class="contador" id="min">35</p>
+        <p>Min.</p>
+      </div>
+      <div class="digital-tech-cinto__seg flex-item">
+        <p class="contador" id="seg">50</p>
+        <p>Seg.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="digital-tech-ofertas container flex-item">
+    <div class="digital-tech-ofertas__item">
+      <div class="ofertas-item__img">
+        <picture><img src="./assets/img/index/oferta-cel.png"
+            srcset="./assets/img/index/oferta-cel.png, ./assets/img/index/oferta-cel@2x.png 2x" alt="Oferta Celular"
+            title="Oferta Celular"></picture>
+      </div>
+      <div class="ofertas-item__text">
+        <p class="title">Oferta Exclusiva </p>
+        <p class="price">S/.800</p>
+        <p class="list-price">S/. 1200</p>
+      </div>
+      <div class="ofertas-item__buton"> <a href="./pages/celulares.html">Vamos! </a></div>
+    </div>
+    <div class="digital-tech-ofertas__item">
+      <div class="ofertas-item__img">
+        <picture><img src="./assets/img/index/oferta-cel.png"
+            srcset="./assets/img/index/oferta-cel.png, ./assets/img/index/oferta-cel@2x.png 2x" alt="Oferta Celular"
+            title="Oferta Celular"></picture>
+      </div>
+      <div class="ofertas-item__text">
+        <p class="title">Oferta Exclusiva </p>
+        <p class="price">S/.800</p>
+        <p class="list-price">S/. 1200</p>
+      </div>
+      <div class="ofertas-item__buton"> <a href="./pages/celulares.html">Vamos! </a></div>
+    </div>
+    <div class="digital-tech-ofertas__item">
+      <div class="ofertas-item__img">
+        <picture><img src="./assets/img/index/oferta-cel.png"
+            srcset="./assets/img/index/oferta-cel.png, ./assets/img/index/oferta-cel@2x.png 2x" alt="Oferta Celular"
+            title="Oferta Celular"></picture>
+      </div>
+      <div class="ofertas-item__text">
+        <p class="title">Oferta Exclusiva </p>
+        <p class="price">S/.800</p>
+        <p class="list-price">S/. 1200</p>
+      </div>
+      <div class="ofertas-item__buton"> <a href="./pages/celulares.html">Vamos! </a></div>
+    </div>
+  </section>
+
+  <!-- footer -->
+  <footer>
+    <div class="f_contenido">
+      <div class="contenidos">
+        <p class="c_titulo">Ir a:</p>
+        <ul>
+          <li><a href="#">Novedades</a></li>
+          <li><a href="#">Recursos</a></li>
+          <li><a href="#">Tecnologias</a></li>
+        </ul>
+      </div>
+      <div class="contenidos">
+        <p class="c_titulo">Nosotros :</p>
+        <ul>
+          <li><a href="#">Trabaja con Nosotros</a></li>
+          <li><a href="#">Emprende</a></li>
+          <li><a href="#">Vende tus productos</a></li>
+        </ul>
+      </div>
+      <div class="contenidos">
+        <p class="c_titulo">Metodos de pago :</p>
+        <img src="./assets/img/metodos.png" alt="metodos" />
+      </div>
+    </div>
+    <div class="copyt">
+      <p>
+        &copy; 2023 Productos digitales Digital_Tech. Todos los derechos
+        reservados.
+      </p>
+    </div>
+  </footer>
+
+  <!-- login -->
   <div id="cont_box_login">
     <div class="cont_login">
 
@@ -229,57 +298,11 @@
       <span class="login___circuitMask"> </span>
     </div>
   </div>
-  <!--  carrito de compras  -->
-  <div id="carrito">
-    <div class="titulo">
-      <a href="#" onclick="toggleDiv('carrito')">&times;</a>
-      <h3>Carrito</h3>
-    </div>
-    <div id="contenedor">
-      <!-- -- aqui tenemos los productos -->
-
-    </div>
-
-    <div class="billing">
-      <div class="subtotal">
-        <p>Total</p>
-        <p id="subTotalprecio">0</p>
-        <p>$</p>
-      </div>
-      <div class="sending">
-        <p>Descuento</p>
-        <p id="descuento">0</p>
-        <p>$</p>
-      </div>
-      <hr />
-      <div class="total">
-        <p>Total</p>
-        <p id="totalpagar">0</p>
-        <p>$</p>
-      </div>
-      <div class="pay">
-        <button onclick="pagar();">Pagar</button>
-        <div class="mostrarqr " id="qrbox">
-          <div class="titulosqr">
-            <p>Resumen De compra</p>
-            <p onclick="toggleDiv('qrbox');">x</p>
-          </div>
-          <div class="vistaproducto">
-            <!-- <div id="resumen"></div> -->
-            <div class="qrcontent">
-              <p>Pagar es facil:</p>
-              <div id="iconopago">
-              </div>
-            </div>
-
-          </div>
 
 
 
-        </div>
-      </div>
-    </div>
-  </div>
+
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"
     integrity="sha512-CNgIRecGo7nphbeZ04Sc13ka07paqdeTu0WR1IM4kNcpmBAUSHSQX0FslNhTDadL4O5SAGapGt4FodqL8My0mA=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -293,5 +316,7 @@
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
   <script type="text/javascript" src="./js/registro.js"></script>
-  <script type="text/javascript" src="./js/index.js"></script></body>
+  <script type="text/javascript" src="./js/index.js"></script>
+</body>
+
 </html>

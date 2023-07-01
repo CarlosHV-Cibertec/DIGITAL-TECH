@@ -1,4 +1,5 @@
 @import url(https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap);
+
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -11,7 +12,9 @@ html {
   /* 1 */
   -webkit-text-size-adjust: 100%;
   /* 2 */
+  overflow-x: hidden;
 }
+
 /* Sections
    ========================================================================== */
 /**
@@ -20,12 +23,14 @@ html {
 body {
   margin: 0;
 }
+
 /**
  * Render the `main` element consistently in IE.
  */
 main {
   display: block;
 }
+
 /**
  * Correct the font size and margin on `h1` elements within `section` and
  * `article` contexts in Chrome, Firefox, and Safari.
@@ -34,6 +39,7 @@ h1 {
   font-size: 2em;
   margin: 0.67em 0;
 }
+
 /* Grouping content
    ========================================================================== */
 /**
@@ -48,6 +54,7 @@ hr {
   overflow: visible;
   /* 2 */
 }
+
 /**
  * 1. Correct the inheritance and scaling of font size in all browsers.
  * 2. Correct the odd `em` font sizing in all browsers.
@@ -58,6 +65,7 @@ pre {
   font-size: 1em;
   /* 2 */
 }
+
 /* Text-level semantics
    ========================================================================== */
 /**
@@ -66,6 +74,7 @@ pre {
 a {
   background-color: transparent;
 }
+
 /**
  * 1. Remove the bottom border in Chrome 57-
  * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
@@ -78,6 +87,7 @@ abbr[title] {
   text-decoration: underline dotted;
   /* 2 */
 }
+
 /**
  * Add the correct font weight in Chrome, Edge, and Safari.
  */
@@ -85,6 +95,7 @@ b,
 strong {
   font-weight: bolder;
 }
+
 /**
  * 1. Correct the inheritance and scaling of font size in all browsers.
  * 2. Correct the odd `em` font sizing in all browsers.
@@ -97,12 +108,14 @@ samp {
   font-size: 1em;
   /* 2 */
 }
+
 /**
  * Add the correct font size in all browsers.
  */
 small {
   font-size: 80%;
 }
+
 /**
  * Prevent `sub` and `sup` elements from affecting the line height in
  * all browsers.
@@ -114,12 +127,15 @@ sup {
   position: relative;
   vertical-align: baseline;
 }
+
 sub {
   bottom: -0.25em;
 }
+
 sup {
   top: -0.5em;
 }
+
 /* Embedded content
    ========================================================================== */
 /**
@@ -128,6 +144,7 @@ sup {
 img {
   border-style: none;
 }
+
 /* Forms
    ========================================================================== */
 /**
@@ -148,6 +165,7 @@ textarea {
   margin: 0;
   /* 2 */
 }
+
 /**
  * Show the overflow in IE.
  * 1. Show the overflow in Edge.
@@ -157,6 +175,7 @@ input {
   /* 1 */
   overflow: visible;
 }
+
 /**
  * Remove the inheritance of text transform in Edge, Firefox, and IE.
  * 1. Remove the inheritance of text transform in Firefox.
@@ -166,6 +185,7 @@ select {
   /* 1 */
   text-transform: none;
 }
+
 /**
  * Correct the inability to style clickable types in iOS and Safari.
  */
@@ -175,6 +195,7 @@ button,
 [type=submit] {
   -webkit-appearance: button;
 }
+
 /**
  * Remove the inner border and padding in Firefox.
  */
@@ -185,6 +206,7 @@ button::-moz-focus-inner,
   border-style: none;
   padding: 0;
 }
+
 /**
  * Restore the focus styles unset by the previous rule.
  */
@@ -194,12 +216,14 @@ button:-moz-focusring,
 [type=submit]:-moz-focusring {
   outline: 1px dotted ButtonText;
 }
+
 /**
  * Correct the padding in Firefox.
  */
 fieldset {
   padding: 0.35em 0.75em 0.625em;
 }
+
 /**
  * 1. Correct the text wrapping in Edge and IE.
  * 2. Correct the color inheritance from `fieldset` elements in IE.
@@ -220,18 +244,21 @@ legend {
   white-space: normal;
   /* 1 */
 }
+
 /**
  * Add the correct vertical alignment in Chrome, Firefox, and Opera.
  */
 progress {
   vertical-align: baseline;
 }
+
 /**
  * Remove the default vertical scrollbar in IE 10+.
  */
 textarea {
   overflow: auto;
 }
+
 /**
  * 1. Add the correct box sizing in IE 10.
  * 2. Remove the padding in IE 10.
@@ -243,6 +270,7 @@ textarea {
   padding: 0;
   /* 2 */
 }
+
 /**
  * Correct the cursor style of increment and decrement buttons in Chrome.
  */
@@ -250,6 +278,7 @@ textarea {
 [type=number]::-webkit-outer-spin-button {
   height: auto;
 }
+
 /**
  * 1. Correct the odd appearance in Chrome and Safari.
  * 2. Correct the outline style in Safari.
@@ -260,12 +289,14 @@ textarea {
   outline-offset: -2px;
   /* 2 */
 }
+
 /**
  * Remove the inner padding in Chrome and Safari on macOS.
  */
 [type=search]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
+
 /**
  * 1. Correct the inability to style clickable types in iOS and Safari.
  * 2. Change font properties to `inherit` in Safari.
@@ -276,6 +307,7 @@ textarea {
   font: inherit;
   /* 2 */
 }
+
 /* Interactive
    ========================================================================== */
 /*
@@ -284,12 +316,14 @@ textarea {
 details {
   display: block;
 }
+
 /*
  * Add the correct display in all browsers.
  */
 summary {
   display: list-item;
 }
+
 /* Misc
    ========================================================================== */
 /**
@@ -298,6 +332,7 @@ summary {
 template {
   display: none;
 }
+
 /**
  * Add the correct display in IE 10.
  */
@@ -308,6 +343,7 @@ template {
 body {
   font-family: "Montserrat", sans-serif;
 }
+
 /* Slider */
 .slick-slider {
   position: relative;
@@ -323,6 +359,7 @@ body {
   touch-action: pan-y;
   -webkit-tap-highlight-color: transparent;
 }
+
 .slick-list {
   position: relative;
   overflow: hidden;
@@ -330,13 +367,16 @@ body {
   margin: 0;
   padding: 0;
 }
+
 .slick-list:focus {
   outline: none;
 }
+
 .slick-list.dragging {
   cursor: pointer;
   cursor: hand;
 }
+
 .slick-slider .slick-track,
 .slick-slider .slick-list {
   -webkit-transform: translate3d(0, 0, 0);
@@ -345,6 +385,7 @@ body {
   -o-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
 }
+
 .slick-track {
   position: relative;
   left: 0;
@@ -353,53 +394,68 @@ body {
   margin-left: auto;
   margin-right: auto;
 }
-.slick-track:before, .slick-track:after {
+
+.slick-track:before,
+.slick-track:after {
   content: "";
   display: table;
 }
+
 .slick-track:after {
   clear: both;
 }
+
 .slick-loading .slick-track {
   visibility: hidden;
 }
+
 .slick-slide {
   float: left;
   height: 100%;
   min-height: 1px;
   display: none;
 }
+
 [dir=rtl] .slick-slide {
   float: right;
 }
+
 .slick-slide img {
   display: block;
 }
+
 .slick-slide.slick-loading img {
   display: none;
 }
+
 .slick-slide.dragging img {
   pointer-events: none;
 }
+
 .slick-initialized .slick-slide {
   display: block;
 }
+
 .slick-loading .slick-slide {
   visibility: hidden;
 }
+
 .slick-vertical .slick-slide {
   display: block;
   height: auto;
   border: 1px solid transparent;
 }
+
 .slick-arrow.slick-hidden {
   display: none;
 }
+
 /* Slider */
 /* Icons */
 /* Arrows */
 .slick-prev,
 .slick-next {
+
   position: absolute;
   display: block;
   height: 20px;
@@ -417,22 +473,28 @@ body {
   border: none;
   outline: none;
 }
-.slick-prev:hover, .slick-prev:focus,
+
+.slick-prev:hover,
+.slick-prev:focus,
 .slick-next:hover,
 .slick-next:focus {
   outline: none;
   background: transparent;
   color: transparent;
 }
-.slick-prev:hover:before, .slick-prev:focus:before,
+
+.slick-prev:hover:before,
+.slick-prev:focus:before,
 .slick-next:hover:before,
 .slick-next:focus:before {
   opacity: 1;
 }
+
 .slick-prev.slick-disabled:before,
 .slick-next.slick-disabled:before {
   opacity: 0.25;
 }
+
 .slick-prev:before,
 .slick-next:before {
   font-family: "slick";
@@ -443,36 +505,46 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
 .slick-prev {
   left: -25px;
 }
+
 [dir=rtl] .slick-prev {
   left: auto;
   right: -25px;
 }
+
 .slick-prev:before {
   content: "←";
 }
+
 [dir=rtl] .slick-prev:before {
   content: "→";
 }
+
 .slick-next {
   right: -25px;
 }
+
 [dir=rtl] .slick-next {
   left: -25px;
   right: auto;
 }
+
 .slick-next:before {
   content: "→";
 }
+
 [dir=rtl] .slick-next:before {
   content: "←";
 }
+
 /* Dots */
 .slick-dotted.slick-slider {
   margin-bottom: 30px;
 }
+
 .slick-dots {
   position: absolute;
   bottom: -25px;
@@ -483,6 +555,7 @@ body {
   margin: 0;
   width: 100%;
 }
+
 .slick-dots li {
   position: relative;
   display: inline-block;
@@ -492,6 +565,7 @@ body {
   padding: 0;
   cursor: pointer;
 }
+
 .slick-dots li button {
   border: 0;
   background: transparent;
@@ -505,12 +579,17 @@ body {
   padding: 5px;
   cursor: pointer;
 }
-.slick-dots li button:hover, .slick-dots li button:focus {
+
+.slick-dots li button:hover,
+.slick-dots li button:focus {
   outline: none;
 }
-.slick-dots li button:hover:before, .slick-dots li button:focus:before {
+
+.slick-dots li button:hover:before,
+.slick-dots li button:focus:before {
   opacity: 1;
 }
+
 .slick-dots li button:before {
   position: absolute;
   top: 0;
@@ -527,52 +606,64 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
 .slick-dots li.slick-active button:before {
   color: black;
   opacity: 0.75;
 }
+
 .container {
   width: 1000px;
   margin: 0 auto;
 }
+
 @media only screen and (min-width: 1280px) {
   .container {
     width: 1024px;
   }
 }
-.cf::before, .cf::after {
+
+.cf::before,
+.cf::after {
   content: "";
   display: table;
 }
+
 .cf::after {
   clear: both;
 }
+
 .flex-item {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 6px;
 }
+
 .digital-tech-info {
-  background: #010326;
+  background: #0d3878;
 }
+
 .digital-tech-info__contact {
   height: 80px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+
 .digital-tech-info__contact__details {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 14px;
 }
+
 .digital-tech-info__contact__details p {
   color: #000;
   font-size: 12px;
   line-height: 13px;
 }
+
 .digital-tech-info__contact__myuser p {
   color: #FFF;
   text-align: center;
@@ -581,13 +672,16 @@ body {
   font-weight: 400;
   font-family: "Bebas Neue", sans-serif;
 }
+
 .digital-tech-info__contact__buycar p {
   font-size: 15px;
   line-height: 13px;
 }
+
 .digital-tech-nav {
-  background: #6FBFBF;
+  background: #1863a8;
 }
+
 .digital-tech-nav__pages ul {
   height: 50px;
   margin: 0;
@@ -596,12 +690,15 @@ body {
   justify-content: space-around;
   align-items: center;
 }
+
 .digital-tech-nav__pages li {
   list-style: none;
 }
+
 .digital-tech-nav__pages li:hover {
   transform: scale(1.2);
 }
+
 .digital-tech-nav__pages a {
   text-decoration: none;
   color: #FFF;
@@ -610,18 +707,22 @@ body {
   line-height: 16px;
   text-transform: uppercase;
 }
+
 .digital-tech-nav__pages a:hover {
   color: #010326;
   transform: scale(1.2);
 }
+
 .digital-tech-hero {
-  margin-top: 130px;
+  /* margin-top: 130px; */
   position: relative;
   z-index: 1;
 }
+
 .slick-slide img {
   width: 100%;
 }
+
 .slick-prev {
   content: "";
   position: absolute;
@@ -634,15 +735,17 @@ body {
   border: 0;
   color: #F0F2F2;
   font-size: 1px;
-  border-bottom: 3px solid #6FBFBF;
-  border-left: 3px solid #6FBFBF;
+  border-bottom: 3px solid #1c7bd4;
+  border-left: 3px solid #1c7bd4;
   transform: translateY(-50%) rotate(45deg);
   border-radius: initial;
 
 }
+
 .slick-prev::before {
   content: "";
 }
+
 .slick-next {
   border-radius: initial;
   content: "";
@@ -656,41 +759,51 @@ body {
   border: 0;
   color: #F0F2F2;
   font-size: 1px;
-  border-bottom: 3px solid #6FBFBF;
-  border-right: 3px solid #6FBFBF;
+  border-bottom: 3px solid #1c7bd4;
+  border-right: 3px solid #1c7bd4;
   transform: translateY(-50%) rotate(-45deg);
 }
+
 .slick-next::before {
   content: "";
 }
+
 .slick-dots {
   bottom: 15px;
 }
+
 .slick-dots li button::before {
   font-size: 45px;
   color: #6FBFBF;
 }
+
 .slick-dots li.slick-active button::before {
   color: #6FBFBF;
 }
+
 .digital-tech-cinto {
-  background-color: #82D9D9;
+  background-color: #1c7bd4;
   margin-top: -34px;
   height: 60px;
   justify-content: center;
   align-items: center;
   gap: 21px;
 }
+
 .digital-tech-cinto p {
   margin: 0;
 }
+
 .digital-tech-cinto__text {
+  color: white;
   font-family: "Bebas Neue", sans-serif;
   font-size: 30px;
 }
+
 .digital-tech-cinto__contador {
   gap: 14px;
 }
+
 .digital-tech-cinto__contador .contador {
   display: flex;
   justify-content: center;
@@ -702,6 +815,7 @@ body {
   font-family: "Bebas Neue", sans-serif;
   font-size: 28px;
 }
+
 .digital-tech-ofertas {
   justify-content: center;
   align-items: center;
@@ -709,6 +823,7 @@ body {
   margin-top: 35px;
   margin-bottom: 35px;
 }
+
 .digital-tech-ofertas__item {
   border-radius: 10px;
   border: 1px solid #393E59;
@@ -716,6 +831,7 @@ body {
   padding: 32px 63px;
   text-align: center;
 }
+
 .digital-tech-ofertas .title {
   font-family: "Bebas Neue", sans-serif;
   font-size: 24px;
@@ -723,6 +839,7 @@ body {
   margin-bottom: 10px;
   color: #010326;
 }
+
 .digital-tech-ofertas .price {
   color: #000;
   font-size: 32px;
@@ -731,6 +848,7 @@ body {
   line-height: normal;
   margin: 0;
 }
+
 .digital-tech-ofertas .list-price {
   color: #6FBFBF;
   font-size: 20px;
@@ -739,11 +857,13 @@ body {
   line-height: normal;
   margin: 7px 0;
 }
+
 .digital-tech-ofertas .ofertas-item__buton {
   margin-top: 14px;
 }
+
 .digital-tech-ofertas .ofertas-item__buton a {
-  background: #010326;
+  background: #1c7bd4;
   color: #FFF;
   text-align: center;
   font-size: 20px;
@@ -754,13 +874,16 @@ body {
   padding: 7px 14px;
   border-radius: 10px;
 }
+
 .digital-tech-footer {
   background-color: #6FBFBF;
   padding: 21px 0;
 }
+
 .digital-tech-footer__content {
   gap: 42px;
 }
+
 .digital-tech-footer .digital-tech-footer__servicio__title {
   color: #010326;
   font-size: 30px;
@@ -768,6 +891,7 @@ body {
   font-weight: 700;
   line-height: 110%;
 }
+
 .digital-tech-footer .digital-tech-footer__servicio__text {
   margin-top: -10px;
   color: #FFF;
@@ -776,6 +900,7 @@ body {
   font-weight: 700;
   line-height: 110%;
 }
+
 .digital-tech-footer .digital-tech-footer__atencion__title {
   color: #010326;
   font-size: 30px;
@@ -783,6 +908,7 @@ body {
   font-weight: 700;
   line-height: 110%;
 }
+
 .digital-tech-footer .digital-tech-footer__atencion__text {
   margin-top: -10px;
   color: #FFF;
@@ -791,6 +917,7 @@ body {
   font-weight: 700;
   line-height: 110%;
 }
+
 .remanso-social {
   position: fixed;
   bottom: 4%;
@@ -800,11 +927,13 @@ body {
   background: #393E59;
   padding: 14px 14px;
 }
+
 .remanso-social__container {
   display: flex;
   flex-direction: column;
   gap: 14px;
 }
+
 .remanso-fixed {
   position: fixed;
   width: 100%;
@@ -812,7 +941,7 @@ body {
   top: 0;
 }
 
-#cont_box_login{
+#cont_box_login {
   top: 130px;
 }
 
@@ -820,12 +949,12 @@ body {
   font-size: 32px;
 } */
 
-#carrito{
+#carrito {
   height: 50vh;
   top: 130px;
   z-index: 100;
 }
 
-#contenedor{
+#contenedor {
   height: 40%;
 }
