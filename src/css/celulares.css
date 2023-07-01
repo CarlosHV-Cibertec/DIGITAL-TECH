@@ -31,15 +31,25 @@ h2 {
   border: 1px solid #c9def8;
   border-radius: 10px;
 }
-.cabecera{
+
+.cabecera {
   display: flex;
   height: 45px;
 }
-#bar{
-  width: 25px;
+
+#bar {
+  color: #002eff;
+  width: 33px;
+  font-size: 33px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
 }
-#titulo_filtro{
-  margin-top: 5px;
+
+#titulo_filtro {
+  color: #002eff;
+
   margin-left: 10px;
   font-size: 33px;
   font-weight: lighter;
@@ -63,7 +73,7 @@ h2 {
   margin: 10px 0;
 }
 
-#marca-filtros label{
+#marca-filtros label {
   margin-left: 10px;
   color: rgb(68, 64, 64);
 }
@@ -72,7 +82,8 @@ h2 {
   width: 70%;
   margin: 10px 20px;
 }
-#precio-texto{
+
+#precio-texto {
   color: rgb(68, 64, 64);
   font-size: 15px;
   margin: 5px 0;
@@ -87,6 +98,7 @@ h2 {
   display: block;
   margin: 15px auto;
 }
+
 input[type="range"] {
   -webkit-appearance: none;
   width: 100%;
@@ -99,7 +111,7 @@ input[type="range"] {
 }
 
 input[type="range"]::-webkit-slider-thumb {
-  
+
   appearance: none;
   width: 20px;
   height: 20px;
@@ -126,6 +138,7 @@ input[type="range"]:focus {
   margin: 5px 0;
   font-size: 16px;
 }
+
 .tablet,
 .computadora,
 .celular,
@@ -163,7 +176,7 @@ input[type="range"]:focus {
 .tablet .modelo,
 .computadora .modelo,
 .celular .modelo,
-.laptop .modelo{
+.laptop .modelo {
   margin: 3px 0;
   color: #002eff;
   font-weight: lighter;
@@ -183,6 +196,7 @@ input[type="range"]:focus {
 }
 
 button {
+
   background-color: #002eff;
   color: white;
   font-size: 14px;
@@ -192,6 +206,11 @@ button {
   border-radius: 50px;
   cursor: pointer;
   text-transform: uppercase;
+}
+
+#ioniconcar {
+  font-size: 24px;
+  margin-left: 5px;
 }
 
 .celular:hover {

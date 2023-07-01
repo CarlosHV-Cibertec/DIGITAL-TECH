@@ -34,7 +34,7 @@ function aplicarFiltros() {
 
 // -- rutas de acceso a las imagenes
 
-var pagesImg = "./src/assets/";
+var pagesImg = "./assets/";
 
 if (contenedorProductos !== "indice") {
   pagesImg = "../assets/"
@@ -396,7 +396,7 @@ mostrarProducto(contenedorProductos, arrayproductos);
 
 let precioDeRango = document.getElementById('precio-filtro');
 
-precioDeRango.addEventListener('input', function() {
+precioDeRango.addEventListener('input', function () {
   let value = parseInt(precioDeRango.value);
   let color = '';
 
@@ -420,7 +420,7 @@ precioDeRango.addEventListener('input', function() {
 let precioRango = document.getElementById('precio-filtro');
 let priceLabel = document.getElementById('priceLabel');
 
-precioRango.addEventListener('input', function() {
+precioRango.addEventListener('input', function () {
   let value = parseInt(precioRango.value);
   priceLabel.innerHTML = '$' + value;
 });
