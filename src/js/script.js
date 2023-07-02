@@ -13,3 +13,7 @@ function mostrarProductos(identifier, arrayproductos) {
     identifier.innerHTML += diseñoProducto;
   });
 }
+
+
+//--   esta funcion nos permite mostrar los productos, recoge como parametros el id del div que va a contener a los productos. y como segundo parametro se usa un array de  los productos.
+//-- se usa un SWITCH PARA PODER VALIDAR EN QUE PAGINA NOS ENCONTRAMOS ASI SE PASARA EL ARRAY CORRECTO.
